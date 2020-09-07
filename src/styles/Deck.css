@@ -1,0 +1,104 @@
+.card-collection {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 30px 30px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
+}
+.your-deck {
+  width: 30%;
+  height: 100%;
+  background-color: #72747a;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1px 1px;
+  grid-template-areas:
+    "header header"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "card card"
+    "footer footer";
+  text-transform: capitalize;
+}
+.your-deck-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "header2";
+  grid-area: header;
+}
+
+.your-deck-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 30%;
+  grid-template-areas:
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . "
+    " . . ";
+  grid-area: card;
+}
+
+.card-icon {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  border: 2px black solid;
+  background-color: #dacdbe;
+}
+.your-deck-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  grid-area: footer;
+}
+
+.attack {
+  float: left;
+  margin-left: 20%;
+}
+.hp {
+  float: right;
+  margin-right: 20%;
+}
+
+.your-deck img {
+  height: 30px;
+}
+.unlocked {
+  background-color: green;
+}
+.locked {
+  background-color: red;
+}
