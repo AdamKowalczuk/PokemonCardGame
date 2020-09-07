@@ -107,4 +107,17 @@
     gap: 5px 5px;
     font-size: 14px;
   }
+  .card-collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px 10px;
+    grid-template-areas: ". . ";
+  }
+  .attack {
+    margin-left: 5%;
+  }
+  .hp {
+    margin-right: 5%;
+  }
 }
