@@ -40,6 +40,9 @@
 }
 @media screen and (max-width: 759px) {
   .menu-button {
-    width: 70vw;
+    width: 60vw;
+  }
+  .menu-button-image {
+    height: 80%;
   }
 }
