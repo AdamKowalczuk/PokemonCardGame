@@ -75,33 +75,51 @@
   border: 2px black solid;
   background-color: #dacdbe;
 }
-.your-deck-footer {
+.image-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 1px 1px;
   grid-template-areas: ". .";
+}
+.your-deck-footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ".";
   grid-area: footer;
 }
-
+.mana {
+  float: left;
+  padding: 10px;
+  border-bottom: 2px solid blue;
+  border-right: 5px solid blue;
+  border-radius: 50%;
+}
 .attack {
   float: left;
-  margin-left: 20%;
+  padding: 10px;
+  border-top: 2px solid red;
+  border-right: 5px solid red;
+  border-radius: 50%;
 }
 .hp {
   float: right;
-  margin-right: 20%;
+  padding: 10px;
+  border-top: 2px solid green;
+  border-left: 5px solid green;
+  border-radius: 50%;
 }
 
 .your-deck img {
+  float: left;
   height: 30px;
+  border: 1px solid #171515;
+  border-radius: 50%;
+  background: #171515;
 }
-.unlocked {
-  background-color: green;
-}
-.locked {
-  background-color: red;
-}
+
 @media screen and (max-width: 759px) {
   .your-deck-cards {
     gap: 5px 5px;

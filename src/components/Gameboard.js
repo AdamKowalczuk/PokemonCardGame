@@ -4,6 +4,7 @@ export default class Gameboard extends Component {
     return (
       <>
         <div>Gameboard</div>
+        <div></div>
       </>
     );
   }
