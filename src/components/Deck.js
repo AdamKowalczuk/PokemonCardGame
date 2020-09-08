@@ -1436,7 +1436,6 @@ export default class Deck extends Component {
             {this.state.cards.map((card, id) => {
               return this.state.cards[id].inDeck ? (
                 <div className="your-deck-card" key={id}>
-                  <h5>{this.state.cards[id].name}</h5>
                   <div className="image-container">
                     <img src={card.image} alt="pokemon" />
                     <li>

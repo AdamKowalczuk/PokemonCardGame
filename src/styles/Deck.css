@@ -142,5 +142,7 @@
   }
   .your-deck-cards {
     gap: 0px 0% !important;
+    font-size: 12px;
+    letter-spacing: 0px;
   }
 }
