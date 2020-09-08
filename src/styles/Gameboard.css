@@ -1,0 +1,79 @@
+.gameboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px 5px;
+  background: #171515;
+  grid-template-areas:
+    "enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand"
+    "enemy-info enemy-info enemy-info enemy-info enemy-info enemy-info enemy-info enemy-info enemy-info"
+    "enemy-side enemy-side enemy-side enemy-side enemy-side enemy-side enemy-side enemy-side enemy-side"
+    "your-side your-side your-side your-side your-side your-side your-side your-side your-side"
+    "your-info your-info your-info your-info your-info your-info your-info your-info your-info"
+    "your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand";
+}
+
+.your-hand {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . . . . .";
+  grid-area: your-hand;
+  background-color: green;
+}
+
+.your-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . .";
+  grid-area: your-info;
+  background-color: green;
+}
+
+.your-side {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . .";
+  grid-area: your-side;
+  background-color: green;
+}
+
+.enemy-side {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . .";
+  grid-area: enemy-side;
+  background-color: red;
+}
+
+.enemy-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . .";
+  grid-area: enemy-info;
+  background-color: red;
+}
+
+.enemy-hand {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-template-areas: ". . . . . . . .";
+  grid-area: enemy-hand;
+  background-color: red;
+}
+.row {
+  width: 100%;
+  height: 100%;
+}

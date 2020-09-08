@@ -1,0 +1,45 @@
+.buttons-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". . . . ."
+    ". start-button start-button start-button ."
+    ". deck-button deck-button deck-button ."
+    ". avatar-button avatar-button avatar-button ."
+    ". . . . .";
+  background: #0086ff;
+}
+
+.start-button {
+  grid-area: start-button;
+}
+
+.deck-button {
+  grid-area: deck-button;
+}
+
+.avatar-button {
+  grid-area: avatar-button;
+}
+.menu-button {
+  width: 40vw;
+  height: 20vh;
+  margin-top: 20px;
+  background-color: #4a4147;
+  border-radius: 30%;
+  border: 3px solid black;
+}
+.menu-button:hover {
+  background-color: white;
+}
+.menu-button-image {
+  height: 100%;
+}
+@media screen and (max-width: 759px) {
+  .menu-button {
+    width: 70vw;
+  }
+}
