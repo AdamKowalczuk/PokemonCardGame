@@ -132,10 +132,9 @@
     gap: 10px 10px;
     grid-template-areas: ". . ";
   }
-  .attack {
-    margin-left: 5%;
-  }
-  .hp {
-    margin-right: 5%;
+  .attack,
+  .hp,
+  .mana {
+    padding: 7px;
   }
 }
