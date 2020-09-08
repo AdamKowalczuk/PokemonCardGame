@@ -3,8 +3,7 @@ import React from "react";
 import Gameboard from "./components/Gameboard";
 import Deck from "./components/Deck";
 import Menu from "./components/Menu";
-import { Router } from "@reach/router";
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./styles/App.css";
 
 function App() {

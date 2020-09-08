@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Menu.css";
-import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import battle from "../menu-icons/battle.svg";
 export default class Gameboard extends Component {
   state = {
     icons: [
@@ -14,8 +12,8 @@ export default class Gameboard extends Component {
   render() {
     return (
       <>
-        <div class="buttons-container">
-          <Link class="start-button" to="/plansza">
+        <div className="buttons-container">
+          <Link className="start-button" to="/plansza">
             <button type="button" className="menu-button">
               <img
                 className="menu-button-image"
@@ -24,7 +22,7 @@ export default class Gameboard extends Component {
               />
             </button>
           </Link>
-          <Link class="deck-button" to="/talia">
+          <Link className="deck-button" to="/talia">
             <button type="button" className="menu-button">
               <img
                 className="menu-button-image"
@@ -33,7 +31,7 @@ export default class Gameboard extends Component {
               />
             </button>
           </Link>
-          <Link class="avatar-button" to="/avatar">
+          <Link className="avatar-button" to="/avatar">
             <button type="button" className="menu-button">
               <img
                 className="menu-button-image"
