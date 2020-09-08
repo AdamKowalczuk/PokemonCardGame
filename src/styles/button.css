@@ -90,13 +90,22 @@
 
   .your-deck-footer li button,
   .your-deck-card li button {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     line-height: 40px;
-    font-size: 28px;
+    font-size: 22px;
     margin: 0;
   }
   .your-deck-footer ul {
     padding: 0px !important;
+  }
+  .delete-card {
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 0px !important;
+    border-radius: 50%;
+    font-size: 10px !important;
+    background: #171515;
+    color: white;
   }
 }

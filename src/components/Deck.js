@@ -1417,12 +1417,12 @@ export default class Deck extends Component {
                 key={id}
                 onDoubleClick={() => this.handleDoubleClick(id)}
               >
-                <p className="mana">Mana:{card.mana}</p>
+                <p className="mana stats">{card.mana}</p>
 
                 <img src={card.image} alt="pokemon" />
-                <p className="attack">Atak:{card.attack}</p>
+                <p className="attack stats">{card.attack}</p>
 
-                <p className="hp">Życie:{card.hp}</p>
+                <p className="hp stats">{card.hp}</p>
               </div>
             );
           })}
