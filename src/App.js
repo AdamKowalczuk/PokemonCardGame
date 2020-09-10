@@ -3,6 +3,7 @@ import React from "react";
 import Gameboard from "./components/Gameboard";
 import Deck from "./components/Deck";
 import Menu from "./components/Menu";
+import Avatar from "./components/Avatar";
 import { Route } from "react-router-dom";
 import "./styles/App.css";
 
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" component={Menu} />
         <Route exact path="/plansza" component={Gameboard} />
         <Route exact path="/talia" component={Deck} />
+        <Route exact path="/avatar" component={Avatar} />
         {/* <Menu exact path="/" /> */}
         {/* <Gameboard exact path="/plansza" />
         <Deck exact path="/talia" /> */}

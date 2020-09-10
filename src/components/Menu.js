@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/Menu.css";
 import { Link } from "react-router-dom";
-export default class Gameboard extends Component {
+export default class Menu extends Component {
   state = {
     icons: [
       { image: require("../menu-icons/battle.svg") },
@@ -12,6 +12,7 @@ export default class Gameboard extends Component {
   render() {
     return (
       <>
+        
         <div className="buttons-container">
           <Link className="start-button" to="/plansza">
             <button type="button" className="menu-button">

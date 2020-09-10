@@ -75,6 +75,14 @@
   border: 2px black solid;
   background-color: #dacdbe;
 }
+.card-icon img {
+  transition: 1s;
+}
+.card-icon img:hover {
+  transform: scale(1.4);
+
+  transition-timing-function: ease-out;
+}
 .image-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,6 +90,7 @@
   gap: 1px 1px;
   grid-template-areas: ". .";
 }
+
 .your-deck-footer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
