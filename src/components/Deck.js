@@ -1476,7 +1476,9 @@ export default class Deck extends Component {
                   <li>
                     <button
                       className="locked send"
-                      onClick={() => this.handleSaveDeck(this.state.cards)}
+                      onClick={() => {
+                        this.props.data.changePage(0);
+                      }}
                     >
                       <i className="fas fa-share-square"></i>
                     </button>

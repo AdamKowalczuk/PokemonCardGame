@@ -158,20 +158,19 @@ export default class Avatar extends Component {
       <>
         <div className="avatars-container">
           <h1 className="avatar-header">Wybierz swój avatar</h1>
-          <h3>{this.props.data.unit}</h3>
-          <h3>{this.props.data.avatar1}</h3>
-          <h3>{this.props.data.avatar2}</h3>
           <button
-            onClick={() =>
+            className="return-button"
+            onClick={() => {
+              this.props.data.changePage(0);
               this.props.data.changeAvatar(
                 this.state.choosen1.image,
                 this.state.choosen2.image
-              )
-            }
+              );
+            }}
           >
-            Zmień
+            Zatwierdź
           </button>
-          <button onClick={() => this.props.data.changePage(0)}>Wróć</button>
+
           {this.state.avatars.map((avatar, id) => {
             return (
               <div

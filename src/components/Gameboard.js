@@ -5,7 +5,12 @@ export default class Gameboard extends Component {
     return (
       <>
         <div className="gameboard">
-          <button onClick={() => this.props.data.changePage(0)}>Wróć</button>
+          <button
+            className="return-button"
+            onClick={() => this.props.data.changePage(0)}
+          >
+            Wróć
+          </button>
           <div className="enemy-hand row">
             <div className="enemy-hand-card">enemy-hand-card</div>
             <div className="enemy-hand-card">enemy-hand-card</div>

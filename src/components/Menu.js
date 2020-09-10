@@ -104,7 +104,13 @@ export default class Menu extends Component {
               />
             );
           } else if (this.state.pages[2].isOpen === true) {
-            return <Deck />;
+            return (
+              <Deck
+                data={{
+                  changePage: this.changePage.bind(this),
+                }}
+              />
+            );
           } else if (this.state.pages[3].isOpen === true) {
             return (
               <Avatar
