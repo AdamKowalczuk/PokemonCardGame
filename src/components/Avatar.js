@@ -9,6 +9,7 @@ export default class Avatar extends Component {
     choosen1: {},
     choosen2: {},
     currentPlayer: 1,
+
     avatars: [
       {
         id: 1,
@@ -157,6 +158,20 @@ export default class Avatar extends Component {
       <>
         <div className="avatars-container">
           <h1 className="avatar-header">Wybierz swój avatar</h1>
+          <h3>{this.props.data.unit}</h3>
+          <h3>{this.props.data.avatar1}</h3>
+          <h3>{this.props.data.avatar2}</h3>
+          <button
+            onClick={() =>
+              this.props.data.changeAvatar(
+                this.state.choosen1.image,
+                this.state.choosen2.image
+              )
+            }
+          >
+            Zmień
+          </button>
+          <button onClick={() => this.props.data.changePage(0)}>Wróć</button>
           {this.state.avatars.map((avatar, id) => {
             return (
               <div

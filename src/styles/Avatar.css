@@ -24,6 +24,9 @@
   background-color: #dacdbe;
   cursor: pointer;
 }
+.avatar-image:hover {
+  opacity: 0.7;
+}
 
 .avatar-header {
   grid-area: h1;
