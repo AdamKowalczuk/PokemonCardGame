@@ -1,6 +1,6 @@
 .avatars-container {
+  width: 100%;
   height: 100vh;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -13,6 +13,7 @@
     ". . . ."
     ". . . .";
   background-color: #0086ff;
+  margin: 0;
 }
 
 .avatar-image {
@@ -23,15 +24,16 @@
   background-color: #dacdbe;
   cursor: pointer;
 }
+
 .avatar-header {
   grid-area: h1;
 }
-
-.avatar-image-choosen {
-  width: 100%;
-  height: auto;
-  border-radius: 5%;
-  border: 2px black solid;
-  background-color: green;
-  cursor: pointer;
+@media screen and (max-width: 759px) {
+  .avatars-container {
+    height: 100%;
+  }
+  .avatar-image img {
+    width: 100%;
+    height: auto;
+  }
 }
