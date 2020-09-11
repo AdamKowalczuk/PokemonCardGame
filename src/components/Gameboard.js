@@ -139,7 +139,9 @@ export default class Gameboard extends Component {
           <div className="your-info row">
             <div className="your-cards-number photos">
               <img src={require("../board-images/card.svg")} alt="card" />
-              <h3>30</h3>
+              <h3>
+                {this.props.data.yourDeck.length - this.state.yourHand.length}
+              </h3>
             </div>
             <div className="your-hp photos">
               <img src={require("../board-images/hp.svg")} alt="hp" />
