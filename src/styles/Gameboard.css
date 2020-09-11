@@ -12,6 +12,10 @@
     "your-side your-side your-side your-side your-side your-side your-side your-side your-side"
     "your-info your-info your-info your-info your-info your-info your-info your-info your-info"
     "your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand";
+  background-image: url("../board-images/pokeball2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .your-hand {
@@ -21,17 +25,18 @@
   gap: 1px 1px;
   grid-template-areas: ". . . . . . . .";
   grid-area: your-hand;
-  background-color: green;
+  /* background-color: #fefefe; */
 }
 
 .your-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr;
   gap: 1px 1px;
-  grid-template-areas: ". . .";
+  grid-template-areas: ".  .  .  .";
   grid-area: your-info;
-  background-color: green;
+  /* background-color: #fefefe; */
+  /* background-color: #00aaff; */
 }
 
 .your-side {
@@ -41,7 +46,7 @@
   gap: 1px 1px;
   grid-template-areas: ". . . . .";
   grid-area: your-side;
-  background-color: green;
+  /* background-color: #332c2b; */
 }
 
 .enemy-side {
@@ -51,17 +56,17 @@
   gap: 1px 1px;
   grid-template-areas: ". . . . .";
   grid-area: enemy-side;
-  background-color: red;
+  /* background-color: #332c2b; */
 }
 
 .enemy-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr;
   gap: 1px 1px;
-  grid-template-areas: ". . .";
+  grid-template-areas: ". . . .";
   grid-area: enemy-info;
-  background-color: red;
+  /* background-color: #e62129; */
 }
 
 .enemy-hand {
@@ -71,9 +76,89 @@
   gap: 5px 5px;
   grid-template-areas: ". . . . . . . .";
   grid-area: enemy-hand;
-  background-color: red;
+  /* background-color: #e62129; */
 }
 .row {
   width: 100%;
   height: 100%;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photos img {
+  width: 100%;
+  max-height: 16vh;
+}
+.your-mana,
+.enemy-mana {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  background: #4444ff;
+}
+
+.progressBarImage {
+  max-height: 8vh;
+}
+@media screen and (max-width: 759px) {
+  .progressBarImage {
+    max-height: 4vh;
+  }
+}
+.enemy-hp,
+.enemy-cards-number,
+.your-hp,
+.your-cards-number {
+  display: grid;
+}
+.hand-card {
+  display: grid;
+}
+.hand-card .stats {
+  font-size: 16px;
+}
+.hand-card .card-icon {
+  max-height: 16vh;
+}
+.hand-card .mana {
+  border-bottom: 2px solid blue;
+  border-right: 5px solid blue;
+  margin-bottom: -12px;
+}
+.hand-card .attack {
+  float: left;
+  border-top: 2px solid red;
+  border-right: 5px solid red;
+  margin-top: -12px;
+}
+.hand-card .hp {
+  float: right;
+  border-top: 2px solid green;
+  border-left: 5px solid green;
+  margin-top: -12px;
+}
+.hand-card .stats {
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 20px;
+  font-weight: bold;
 }

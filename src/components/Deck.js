@@ -1371,30 +1371,7 @@ export default class Deck extends Component {
       },
     ],
   };
-  handleDoubleClick = (id) => {
-    let cards = [...this.state.cards];
-    let card = { ...cards[id] };
-    if (card.inDeck === false) {
-      this.setState({
-        number: this.state.number + 1,
-      });
-    }
-    card.inDeck = true;
-    cards[id] = card;
-    this.setState({
-      cards,
-    });
-  };
-  handleDelete = (id) => {
-    let cards = [...this.state.cards];
-    let card = { ...cards[id] };
-    card.inDeck = false;
-    cards[id] = card;
-    this.setState({
-      cards,
-      number: this.state.number - 1,
-    });
-  };
+
   handleDeleteAll = () => {
     this.state.cards.forEach((card) => {
       card.inDeck = false;
@@ -1415,7 +1392,9 @@ export default class Deck extends Component {
                 value={id}
                 className="card-icon"
                 key={id}
-                onDoubleClick={() => this.handleDoubleClick(id)}
+                onClick={() => {
+                  this.props.data.addToDeck(this.state.cards[id]);
+                }}
               >
                 <p className="mana stats">{card.mana}</p>
 
@@ -1429,26 +1408,26 @@ export default class Deck extends Component {
         </div>
         <div className="your-deck">
           <div className="your-deck-header">
-            <h2>Twoja talia {this.state.number}/20</h2>
+            <h2>Twoja talia {this.props.data.yourDeck.length}/20</h2>
           </div>
 
           <div className="your-deck-cards">
-            {this.state.cards.map((card, id) => {
-              return this.state.cards[id].inDeck ? (
+            {this.props.data.yourDeck.map((card, id) => {
+              return (
                 <div className="your-deck-card" key={id}>
                   <div className="image-container">
                     <img src={card.image} alt="pokemon" />
                     <li>
                       <button
                         className="delete-card"
-                        onClick={() => this.handleDelete(id)}
+                        onClick={() => this.props.data.deleteFromDeck(id)}
                       >
                         <i className="far fa-trash-alt"></i>
                       </button>
                     </li>
                   </div>
                 </div>
-              ) : null;
+              );
             })}
           </div>
           <div className="your-deck-footer">
@@ -1463,7 +1442,7 @@ export default class Deck extends Component {
                   <li>
                     <button
                       className="unlocked-red hover-color"
-                      onClick={this.handleDeleteAll}
+                      onClick={() => this.props.data.deleteAll()}
                     >
                       <i className="far fa-trash-alt"></i>
                     </button>
@@ -1484,7 +1463,10 @@ export default class Deck extends Component {
                     </button>
                   </li>
                   <li>
-                    <button className="locked" onClick={this.handleDeleteAll}>
+                    <button
+                      className="locked"
+                      onClick={() => this.props.data.deleteAll()}
+                    >
                       <i className="far fa-trash-alt"></i>
                     </button>
                   </li>
