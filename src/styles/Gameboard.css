@@ -164,6 +164,7 @@
 }
 .turn-button {
   position: relative;
-  bottom: 48.7vh;
+  bottom: 47.4vh;
   left: 90vw;
+  padding: 10px;
 }

@@ -53,21 +53,25 @@ export default class Gameboard extends Component {
     if (this.state.firstPlayerTurn === true) {
       let enemyHand = [...this.state.enemyHand];
       let newCard = { ...this.props.data.enemyDeck[enemyID] };
-      newCard.inHand = true;
-      this.props.data.enemyDeck[enemyID].inHand = true;
-      enemyHand[enemyHand.length] = newCard;
+      if (this.state.enemyHand.length < 8) {
+        newCard.inHand = true;
+        this.props.data.enemyDeck[enemyID].inHand = true;
+        enemyHand[enemyHand.length] = newCard;
+      }
 
       this.setState({
         enemyHand,
         enemyMana: this.state.maxMana,
         firstPlayerTurn: !this.state.firstPlayerTurn,
       });
-    } else {
+    } else if (this.state.firstPlayerTurn === false) {
       let yourHand = [...this.state.yourHand];
       let newCard = { ...this.props.data.yourDeck[yourID] };
-      newCard.inHand = true;
-      this.props.data.yourDeck[yourID].inHand = true;
-      yourHand[yourHand.length] = newCard;
+      if (this.state.yourHand.length < 8) {
+        newCard.inHand = true;
+        this.props.data.yourDeck[yourID].inHand = true;
+        yourHand[yourHand.length] = newCard;
+      }
 
       this.setState({
         yourHand,
@@ -185,7 +189,7 @@ export default class Gameboard extends Component {
             </div>
             <div className="enemy-hp photos">
               <img src={require("../board-images/hp.svg")} alt="hp" />
-              <br></br>
+
               <h3>30</h3>
             </div>
             <div className="enemy-avatar photos">
