@@ -72,18 +72,29 @@ export default class Gameboard extends Component {
         this.props.data.yourDeck[yourID].inHand = true;
         yourHand[yourHand.length] = newCard;
       }
+      if (this.state.maxMana === 10) {
+        this.setState({
+          yourHand,
 
-      this.setState({
-        yourHand,
-        maxMana: this.state.maxMana + 1,
-        yourMana: this.state.maxMana + 1,
-        firstPlayerTurn: !this.state.firstPlayerTurn,
-      });
+          yourMana: this.state.maxMana,
+          firstPlayerTurn: !this.state.firstPlayerTurn,
+        });
+      } else {
+        this.setState({
+          yourHand,
+          maxMana: this.state.maxMana + 1,
+          yourMana: this.state.maxMana + 1,
+          firstPlayerTurn: !this.state.firstPlayerTurn,
+        });
+      }
     }
   }
 
   useCard(card, id) {
-    if (this.state.firstPlayerTurn === true) {
+    if (
+      this.state.firstPlayerTurn === true &&
+      this.state.yourActiveCards.length < 5
+    ) {
       if (this.state.yourMana >= this.props.data.yourDeck[id].mana) {
         let yourHand = [...this.state.yourHand];
         let yourDeck = [...this.props.data.yourDeck];
@@ -101,7 +112,10 @@ export default class Gameboard extends Component {
       } else {
         console.log("Za mało many");
       }
-    } else {
+    } else if (
+      this.state.firstPlayerTurn === false &&
+      this.state.enemyActiveCards.length < 5
+    ) {
       if (this.state.enemyMana >= this.props.data.enemyDeck[id].mana) {
         let enemyHand = [...this.state.enemyHand];
         let enemyDeck = [...this.props.data.enemyDeck];
