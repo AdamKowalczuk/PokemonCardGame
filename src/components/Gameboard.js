@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Gameboard.css";
+
 export default class Gameboard extends Component {
   constructor(props) {
     super(props);
@@ -7,10 +8,15 @@ export default class Gameboard extends Component {
       yourMana: 1,
       enemyMana: 1,
       maxMana: 1,
-      actualCardsNumber: 0,
+      yourCardsNumber: 0,
+      enemyCardsNumber: 0,
       cardsInYourHandNumber: 4,
+      cardsInEnemyHandNumber: 4,
       yourHand: [],
+      enemyHand: [],
       yourActiveCards: [],
+      enemyActiveCards: [],
+      firstPlayerTurn: true,
     };
 
     // this.init();
@@ -23,9 +29,18 @@ export default class Gameboard extends Component {
     let secondCard = this.props.data.yourDeck[1];
     let thirdCard = this.props.data.yourDeck[2];
     let fourthCard = this.props.data.yourDeck[3];
+    let enemyfirstCard = this.props.data.enemyDeck[0];
+    let enemysecondCard = this.props.data.enemyDeck[1];
+    let enemythirdCard = this.props.data.enemyDeck[2];
+    let enemyfourthCard = this.props.data.enemyDeck[3];
     let yourHand = [firstCard, secondCard, thirdCard, fourthCard];
-    console.log(yourHand);
-    this.setState({ yourHand });
+    let enemyHand = [
+      enemyfirstCard,
+      enemysecondCard,
+      enemythirdCard,
+      enemyfourthCard,
+    ];
+    this.setState({ yourHand, enemyHand });
   }
   checkCard(card) {
     // for(i=this.state.actualCardsNumber;i<this.state.cardsInYourHandNumber;i++){
@@ -33,51 +48,140 @@ export default class Gameboard extends Component {
     // if(card.)
     // return card[this.state.cardsInYourHandNumber]
   }
-  drawACard(id) {
-    let yourHand = [...this.state.yourHand];
-    let newCard = { ...this.props.data.yourDeck[id] };
-    newCard.inHand = true;
-    this.props.data.yourDeck[id].inHand = true;
-    console.log(newCard);
-    console.log(yourHand.length);
-    yourHand[yourHand.length] = newCard;
-    this.setState({
-      yourHand,
-    });
+
+  drawACard(yourID, enemyID) {
+    if (this.state.firstPlayerTurn === true) {
+      let enemyHand = [...this.state.enemyHand];
+      let newCard = { ...this.props.data.enemyDeck[enemyID] };
+      newCard.inHand = true;
+      this.props.data.enemyDeck[enemyID].inHand = true;
+      enemyHand[enemyHand.length] = newCard;
+
+      this.setState({
+        enemyHand,
+        enemyMana: this.state.maxMana,
+        firstPlayerTurn: !this.state.firstPlayerTurn,
+      });
+    } else {
+      let yourHand = [...this.state.yourHand];
+      let newCard = { ...this.props.data.yourDeck[yourID] };
+      newCard.inHand = true;
+      this.props.data.yourDeck[yourID].inHand = true;
+      yourHand[yourHand.length] = newCard;
+
+      this.setState({
+        yourHand,
+        maxMana: this.state.maxMana + 1,
+        yourMana: this.state.maxMana + 1,
+        firstPlayerTurn: !this.state.firstPlayerTurn,
+      });
+    }
   }
 
   useCard(card, id) {
-    let yourHand = [...this.state.yourHand];
-    let yourDeck = [...this.props.data.yourDeck];
-    let yourActiveCards = [...this.state.yourActiveCards];
-    card.isActive = true;
-    yourActiveCards[yourActiveCards.length] = card;
-    yourHand.splice(id, 1);
-    yourDeck.splice(id, 1);
-    this.props.data.yourDeck = yourDeck;
-    this.setState({
-      yourHand,
-      yourActiveCards,
-    });
+    if (this.state.firstPlayerTurn === true) {
+      if (this.state.yourMana >= this.props.data.yourDeck[id].mana) {
+        let yourHand = [...this.state.yourHand];
+        let yourDeck = [...this.props.data.yourDeck];
+        let yourActiveCards = [...this.state.yourActiveCards];
+        card.isActive = true;
+        yourActiveCards[yourActiveCards.length] = card;
+        yourHand.splice(id, 1);
+        yourDeck.splice(id, 1);
+        this.props.data.yourDeck = yourDeck;
+        this.setState({
+          yourHand,
+          yourActiveCards,
+          yourMana: this.state.yourMana - card.mana,
+        });
+      } else {
+        console.log("Za mało many");
+      }
+    } else {
+      if (this.state.enemyMana >= this.props.data.enemyDeck[id].mana) {
+        let enemyHand = [...this.state.enemyHand];
+        let enemyDeck = [...this.props.data.enemyDeck];
+        let enemyActiveCards = [...this.state.enemyActiveCards];
+        card.isActive = true;
+        enemyActiveCards[enemyActiveCards.length] = card;
+        enemyHand.splice(id, 1);
+        enemyDeck.splice(id, 1);
+        this.props.data.enemyDeck = enemyDeck;
+        this.setState({
+          enemyHand,
+          enemyActiveCards,
+          enemyMana: this.state.enemyMana - card.mana,
+        });
+      } else {
+        console.log("Za mało many");
+      }
+    }
   }
+
   render() {
+    const manaTable = [];
+    for (let i = 0; i < this.state.yourMana; i++) {
+      manaTable.push(
+        <img
+          className="progressBarImage"
+          key={i}
+          src={require("../board-images/potion.svg")}
+          alt="mana"
+        />
+      );
+    }
+    const manaTable2 = [];
+    for (let i = 0; i < this.state.enemyMana; i++) {
+      manaTable2.push(
+        <img
+          className="progressBarImage"
+          key={i}
+          src={require("../board-images/potion.svg")}
+          alt="mana"
+        />
+      );
+    }
+
     return (
       <>
         <div className="gameboard">
           <div className="enemy-hand row">
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
-            <div className="hand-card">enemy-hand-card</div>
+            {this.state.enemyHand.map((card, id) => {
+              //console.log(this.props.data.yourDeck[id].inHand);
+              // if (this.props.data.yourDeck[id].inHand === true) {
+              return (
+                <div className="hand-card" key={id}>
+                  <div
+                    className="card-icon"
+                    value={id}
+                    onClick={() => this.useCard(this.state.enemyHand[id], id)}
+                  >
+                    <p className="mana stats">
+                      {this.props.data.enemyDeck[id].mana}
+                    </p>
+
+                    <img
+                      src={this.props.data.enemyDeck[id].image}
+                      alt="pokemon"
+                    />
+                    <p className="attack stats">
+                      {this.props.data.enemyDeck[id].attack}
+                    </p>
+
+                    <p className="hp stats">
+                      {this.props.data.enemyDeck[id].hp}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <div className="enemy-info row">
             <div className="enemy-cards-number photos">
               <img src={require("../board-images/card.svg")} alt="card" />
-              <h3>30</h3>
+              <h3>
+                {this.props.data.enemyDeck.length - this.state.enemyHand.length}
+              </h3>
             </div>
             <div className="enemy-hp photos">
               <img src={require("../board-images/hp.svg")} alt="hp" />
@@ -88,22 +192,46 @@ export default class Gameboard extends Component {
               <img src={this.props.data.avatar2} alt="enemy avatar" />
             </div>
             <div className="enemy-mana">
-              <div className="stats-container">
-                <img
-                  className="progressBarImage"
-                  src={require("../board-images/potion.svg")}
-                  alt="mana"
-                />
-              </div>
+              <div className="stats-container">{manaTable2}</div>
             </div>
           </div>
           <div className="enemy-side row">
-            <div className="enemy-side-card">enemy-side-card</div>
-            <div className="enemy-side-card">enemy-side-card</div>
-            <div className="enemy-side-card">enemy-side-card</div>
-            <div className="enemy-side-card">enemy-side-card</div>
-            <div className="enemy-side-card">enemy-side-card</div>
+            {this.state.enemyActiveCards.map((card, id) => {
+              // if (this.props.data.yourDeck[id].inHand === true) {
+              return (
+                <div className="hand-card" key={id}>
+                  <div className="card-icon" value={id}>
+                    <p className="mana stats">
+                      {this.state.enemyActiveCards[id].mana}
+                    </p>
+
+                    <img
+                      src={this.state.enemyActiveCards[id].image}
+                      alt="pokemon"
+                    />
+                    <p className="attack stats">
+                      {this.state.enemyActiveCards[id].attack}
+                    </p>
+
+                    <p className="hp stats">
+                      {this.state.enemyActiveCards[id].hp}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
+          <button
+            className="turn-button"
+            onClick={() => {
+              this.drawACard(
+                this.state.yourHand.length,
+                this.state.enemyHand.length
+              );
+            }}
+          >
+            Dobierz
+          </button>
           <div className="your-side row">
             {this.state.yourActiveCards.map((card, id) => {
               // if (this.props.data.yourDeck[id].inHand === true) {
@@ -129,12 +257,6 @@ export default class Gameboard extends Component {
                 </div>
               );
             })}
-            <button
-              className="hand-card"
-              onClick={() => this.drawACard(this.state.yourHand.length)}
-            >
-              Dobierz
-            </button>
           </div>
           <div className="your-info row">
             <div className="your-cards-number photos">
@@ -152,31 +274,12 @@ export default class Gameboard extends Component {
             </div>
             <div className="your-mana">
               <div className="stats-container">
-                <img
+                {manaTable}
+                {/* <img
                   className="progressBarImage"
                   src={require("../board-images/potion.svg")}
                   alt="mana"
-                />
-                <img
-                  className="progressBarImage"
-                  src={require("../board-images/potion.svg")}
-                  alt="mana"
-                />
-                <img
-                  className="progressBarImage"
-                  src={require("../board-images/potion.svg")}
-                  alt="mana"
-                />
-                <img
-                  className="progressBarImage"
-                  src={require("../board-images/potion.svg")}
-                  alt="mana"
-                />
-                <img
-                  className="progressBarImage"
-                  src={require("../board-images/potion.svg")}
-                  alt="mana"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -209,9 +312,6 @@ export default class Gameboard extends Component {
                   </div>
                 </div>
               );
-              // } else {
-              //   return null;
-              // }
             })}
           </div>
         </div>

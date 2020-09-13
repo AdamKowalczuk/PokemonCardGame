@@ -1372,17 +1372,9 @@ export default class Deck extends Component {
     ],
   };
 
-  handleDeleteAll = () => {
-    this.state.cards.forEach((card) => {
-      card.inDeck = false;
-      this.setState({
-        card,
-        number: 0,
-      });
-    });
-  };
-
   render() {
+    console.log(this.props.data.playerOne);
+
     return (
       <>
         <div className="card-collection">
@@ -1407,29 +1399,64 @@ export default class Deck extends Component {
           })}
         </div>
         <div className="your-deck">
-          <div className="your-deck-header">
-            <h2>Twoja talia {this.props.data.yourDeck.length}/20</h2>
-          </div>
+          {this.props.data.playerOne ? (
+            <>
+              <div className="your-deck-header">
+                <h2>Talia gracza 1 {this.props.data.yourDeck.length}/20</h2>
+                <button onClick={() => this.props.data.changePlayer()}>
+                  Zmień gracza
+                </button>
+              </div>
+              <div className="your-deck-cards">
+                {this.props.data.yourDeck.map((card, id) => {
+                  return (
+                    <div className="your-deck-card" key={id}>
+                      <div className="image-container">
+                        <img src={card.image} alt="pokemon" />
+                        <li>
+                          <button
+                            className="delete-card"
+                            onClick={() => this.props.data.deleteFromDeck(id)}
+                          >
+                            <i className="far fa-trash-alt"></i>
+                          </button>
+                        </li>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="your-deck-header">
+                <h2>Talia gracza 2 {this.props.data.enemyDeck.length}/20</h2>
+                <button onClick={() => this.props.data.changePlayer()}>
+                  Zmień gracza
+                </button>
+              </div>
+              <div className="your-deck-cards">
+                {this.props.data.enemyDeck.map((card, id) => {
+                  return (
+                    <div className="your-deck-card" key={id}>
+                      <div className="image-container">
+                        <img src={card.image} alt="pokemon" />
+                        <li>
+                          <button
+                            className="delete-card"
+                            onClick={() => this.props.data.deleteFromDeck(id)}
+                          >
+                            <i className="far fa-trash-alt"></i>
+                          </button>
+                        </li>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
 
-          <div className="your-deck-cards">
-            {this.props.data.yourDeck.map((card, id) => {
-              return (
-                <div className="your-deck-card" key={id}>
-                  <div className="image-container">
-                    <img src={card.image} alt="pokemon" />
-                    <li>
-                      <button
-                        className="delete-card"
-                        onClick={() => this.props.data.deleteFromDeck(id)}
-                      >
-                        <i className="far fa-trash-alt"></i>
-                      </button>
-                    </li>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
           <div className="your-deck-footer">
             {this.state.number === 20 ? (
               <>
