@@ -13,6 +13,7 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: "addHp",
       },
       {
         id: 142,
@@ -22,6 +23,7 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: "addHp",
       },
       {
         id: 65,
@@ -31,6 +33,7 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
+        specialEffect: "addHp",
       },
       {
         id: 24,
@@ -40,6 +43,7 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: "Add Hp",
       },
       {
         id: 59,
@@ -1394,7 +1398,13 @@ export default class Deck extends Component {
                 />
                 <img src={card.image} className="pokemon-image" alt="pokemon" />
                 <p className="attack stats">{card.attack}</p>
-
+                <p
+                  className={
+                    card.specialEffect === undefined ? "" : "special-effect"
+                  }
+                >
+                  {card.specialEffect}
+                </p>
                 <p className="hp stats">{card.hp}</p>
               </div>
             );
