@@ -13,7 +13,7 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
-        specialEffect: "addHp",
+        specialEffect: "Hp",
       },
       {
         id: 142,
@@ -23,7 +23,7 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
-        specialEffect: "addHp",
+        specialEffect: "Hp",
       },
       {
         id: 65,
@@ -33,7 +33,7 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
-        specialEffect: "addHp",
+        specialEffect: "Taunt",
       },
       {
         id: 24,
@@ -43,7 +43,7 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
-        specialEffect: "Add Hp",
+        specialEffect: "Dmg",
       },
       {
         id: 59,

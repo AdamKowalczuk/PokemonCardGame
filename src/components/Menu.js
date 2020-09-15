@@ -376,7 +376,7 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: "Taunt",
         },
         {
           id: 10,
