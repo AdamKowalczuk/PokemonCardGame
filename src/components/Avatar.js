@@ -123,7 +123,7 @@ export default class Avatar extends Component {
     if (this.state.currentPlayer === 1) {
       let avatars = [...this.state.avatars];
       let avatar = { ...avatars[id] };
-      avatar.color = "green";
+      avatar.color = "#e36414";
       avatars[id] = avatar;
       let prevAvatar = { ...avatars[this.state.previous1] };
       prevAvatar.color = "#dacdbe";
@@ -138,7 +138,7 @@ export default class Avatar extends Component {
     } else if (this.state.currentPlayer === 2) {
       let avatars = [...this.state.avatars];
       let avatar = { ...avatars[id] };
-      avatar.color = "blue";
+      avatar.color = "#e62129";
       avatars[id] = avatar;
       let prevAvatar = { ...avatars[this.state.previous2] };
       prevAvatar.color = "#dacdbe";
@@ -156,8 +156,7 @@ export default class Avatar extends Component {
   render() {
     return (
       <>
-        <div className="avatars-container">
-          <h1 className="avatar-header">Wybierz swój avatar</h1>
+        <div className="box">
           <button
             className="return-button"
             onClick={() => {
@@ -169,7 +168,11 @@ export default class Avatar extends Component {
             }}
           >
             Zatwierdź
+            {/* <img src={require("../menu-icons/send.svg")} alt="save icon" /> */}
           </button>
+        </div>
+        <div className="avatars-container">
+          <h1 className="avatar-header">Wybierz swój avatar</h1>
 
           {this.state.avatars.map((avatar, id) => {
             return (

@@ -109,7 +109,3 @@
     color: white;
   }
 }
-.return-button {
-  background: yellow;
-  grid-area: return-button;
-}

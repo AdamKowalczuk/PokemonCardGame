@@ -6,7 +6,7 @@
   grid-template-rows: repeat(6, 1fr);
   gap: 1px 1px;
   grid-template-areas:
-    "h1 h1 h1 return-button"
+    "h1 h1 h1 h1"
     ". . . ."
     ". . . ."
     ". . . ."
@@ -30,6 +30,7 @@
 
 .avatar-header {
   grid-area: h1;
+  font-family: "Shojumaru", cursive;
 }
 @media screen and (max-width: 759px) {
   .avatars-container {
@@ -40,3 +41,20 @@
     height: auto;
   }
 }
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.return-button {
+  position: absolute;
+  background: yellow;
+  float: right;
+  height: 6vh;
+}
+/* .return-button img {
+  background: black;
+  padding: 5px;
+  height: 3.2vh;
+  transform: scale(2);
+} */

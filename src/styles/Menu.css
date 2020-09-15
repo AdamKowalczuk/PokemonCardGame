@@ -16,6 +16,7 @@
   font-size: calc(40px + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
   margin-top: 5vh;
   grid-area: h1;
+  font-family: "Shojumaru", cursive;
 }
 .start-button {
   grid-area: start-button;
