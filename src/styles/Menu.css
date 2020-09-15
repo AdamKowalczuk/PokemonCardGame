@@ -50,3 +50,16 @@
     height: 80%;
   }
 }
+@media screen and (max-width: 759px) {
+  .menu-button {
+    width: 60vw;
+  }
+  .menu-button-image {
+    height: 80%;
+  }
+}
+@media screen and (max-height: 450px) {
+  .buttons-container {
+    height: 100%;
+  }
+}
