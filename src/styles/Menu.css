@@ -5,14 +5,18 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 1px 1px;
   grid-template-areas:
-    ". . . . ."
+    "h1 h1 h1 h1 h1"
     ". start-button start-button start-button ."
     ". deck-button deck-button deck-button ."
     ". avatar-button avatar-button avatar-button ."
     ". . . . .";
   background: #0086ff;
 }
-
+.buttons-container h1 {
+  font-size: calc(40px + (80 - 40) * ((100vw - 300px) / (1600 - 300)));
+  margin-top: 5vh;
+  grid-area: h1;
+}
 .start-button {
   grid-area: start-button;
 }

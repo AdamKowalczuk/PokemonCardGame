@@ -595,6 +595,7 @@ export default class Menu extends Component {
           if (this.state.pages[0].isOpen === true) {
             return (
               <div className="buttons-container">
+                <h1>PokeNerd</h1>
                 <div className="start-button">
                   <button
                     type="button"
