@@ -24,6 +24,17 @@ export default class Menu extends Component {
       prevPage: 0,
       yourDeck: [
         {
+          id: 69,
+          name: "bellsprout",
+          image: require("../pokemons/bellsprout.svg"),
+          mana: 1,
+          attack: 1,
+          hp: 2,
+          inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
+        },
+        {
           id: 63,
           name: "abra",
           image: require("../pokemons/abra.svg"),
@@ -31,6 +42,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 142,
@@ -40,6 +53,8 @@ export default class Menu extends Component {
           attack: 6,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 65,
@@ -49,6 +64,8 @@ export default class Menu extends Component {
           attack: 7,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 24,
@@ -58,6 +75,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 59,
@@ -67,6 +86,8 @@ export default class Menu extends Component {
           attack: 5,
           hp: 6,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 144,
@@ -76,6 +97,8 @@ export default class Menu extends Component {
           attack: 10,
           hp: 7,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 15,
@@ -85,16 +108,10 @@ export default class Menu extends Component {
           attack: 3,
           hp: 2,
           inDeck: false,
+          availableAttacks: 2,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
-        {
-          id: 69,
-          name: "bellsprout",
-          image: require("../pokemons/bellsprout.svg"),
-          mana: 1,
-          attack: 1,
-          hp: 2,
-          inDeck: false,
-        },
+
         {
           id: 9,
           name: "blastoise",
@@ -103,6 +120,8 @@ export default class Menu extends Component {
           attack: 7,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 1,
@@ -112,6 +131,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 12,
@@ -121,6 +142,8 @@ export default class Menu extends Component {
           attack: 1,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 10,
@@ -130,6 +153,8 @@ export default class Menu extends Component {
           attack: 1,
           hp: 2,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
         },
         {
           id: 113,
@@ -139,6 +164,8 @@ export default class Menu extends Component {
           attack: 2,
           hp: 7,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 6,
@@ -148,6 +175,8 @@ export default class Menu extends Component {
           attack: 9,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 4,
@@ -157,6 +186,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 2,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 5,
@@ -166,6 +197,8 @@ export default class Menu extends Component {
           attack: 5,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 36,
@@ -175,6 +208,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 35,
@@ -184,6 +219,8 @@ export default class Menu extends Component {
           attack: 2,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 91,
@@ -193,6 +230,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
         {
           id: 104,
@@ -202,10 +241,23 @@ export default class Menu extends Component {
           attack: 4,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
         },
       ],
       enemyDeck: [
         {
+          id: 69,
+          name: "bellsprout",
+          image: require("../pokemons/bellsprout.svg"),
+          mana: 1,
+          attack: 1,
+          hp: 2,
+          inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [{ name: "drawCard", value: 1 }],
+        },
+        {
           id: 63,
           name: "abra",
           image: require("../pokemons/abra.svg"),
@@ -213,6 +265,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 142,
@@ -222,6 +276,8 @@ export default class Menu extends Component {
           attack: 6,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 65,
@@ -231,6 +287,8 @@ export default class Menu extends Component {
           attack: 7,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 24,
@@ -240,6 +298,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "poison",
         },
         {
           id: 59,
@@ -249,6 +309,8 @@ export default class Menu extends Component {
           attack: 5,
           hp: 6,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 144,
@@ -258,6 +320,8 @@ export default class Menu extends Component {
           attack: 10,
           hp: 7,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 15,
@@ -267,6 +331,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 2,
           inDeck: false,
+          availableAttacks: 2,
+          specialEffect: "",
         },
         {
           id: 69,
@@ -276,6 +342,8 @@ export default class Menu extends Component {
           attack: 1,
           hp: 2,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "taunt",
         },
         {
           id: 9,
@@ -285,6 +353,8 @@ export default class Menu extends Component {
           attack: 7,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 1,
@@ -294,6 +364,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "addHp",
         },
         {
           id: 12,
@@ -303,6 +375,8 @@ export default class Menu extends Component {
           attack: 1,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 10,
@@ -312,6 +386,8 @@ export default class Menu extends Component {
           attack: 1,
           hp: 2,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 113,
@@ -321,6 +397,8 @@ export default class Menu extends Component {
           attack: 2,
           hp: 7,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "addHp",
         },
         {
           id: 6,
@@ -330,6 +408,8 @@ export default class Menu extends Component {
           attack: 9,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 4,
@@ -339,6 +419,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 2,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 5,
@@ -348,6 +430,8 @@ export default class Menu extends Component {
           attack: 5,
           hp: 4,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 36,
@@ -357,6 +441,8 @@ export default class Menu extends Component {
           attack: 4,
           hp: 5,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 35,
@@ -366,6 +452,8 @@ export default class Menu extends Component {
           attack: 2,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 91,
@@ -375,6 +463,8 @@ export default class Menu extends Component {
           attack: 3,
           hp: 8,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "",
         },
         {
           id: 104,
@@ -384,11 +474,14 @@ export default class Menu extends Component {
           attack: 4,
           hp: 3,
           inDeck: false,
+          availableAttacks: 1,
+          specialEffect: "addAttack",
         },
       ],
       yourCardNumber: 0,
       enemyCardNumber: 0,
       playerOne: true,
+      prevImage: "",
     };
   }
   addToDeck(item) {
@@ -418,9 +511,17 @@ export default class Menu extends Component {
     if (this.state.playerOne === true) {
       let yourDeck = [...this.state.yourDeck];
       yourDeck.splice(id, 1);
-      this.setState({
-        yourDeck,
-      });
+      if (this.state.yourDeck[id + 1] !== undefined) {
+        this.setState({
+          yourDeck,
+
+          prevImage: this.state.yourDeck[id + 1].image,
+        });
+      } else {
+        this.setState({
+          yourDeck,
+        });
+      }
     } else {
       let enemyDeck = [...this.state.enemyDeck];
       enemyDeck.splice(id, 1);
@@ -500,10 +601,10 @@ export default class Menu extends Component {
                     className="menu-button"
                     onClick={() => {
                       this.changePage(1);
-                      this.deckShuffle(
-                        this.state.yourDeck,
-                        this.state.enemyDeck
-                      );
+                      // this.deckShuffle(
+                      //   this.state.yourDeck,
+                      //   this.state.enemyDeck
+                      // );
                     }}
                   >
                     <img
@@ -566,6 +667,7 @@ export default class Menu extends Component {
                   yourDeck: this.state.yourDeck,
                   enemyDeck: this.state.enemyDeck,
                   playerOne: this.state.playerOne,
+                  prevImage: this.state.prevImage,
                 }}
               />
             );

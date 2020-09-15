@@ -1373,8 +1373,6 @@ export default class Deck extends Component {
   };
 
   render() {
-    console.log(this.props.data.playerOne);
-
     return (
       <>
         <div className="card-collection">
@@ -1389,8 +1387,12 @@ export default class Deck extends Component {
                 }}
               >
                 <p className="mana stats">{card.mana}</p>
-
-                <img src={card.image} alt="pokemon" />
+                <img
+                  className="add-card"
+                  src={require("../menu-icons/add.svg")}
+                  alt="add button"
+                />
+                <img src={card.image} className="pokemon-image" alt="pokemon" />
                 <p className="attack stats">{card.attack}</p>
 
                 <p className="hp stats">{card.hp}</p>
@@ -1412,15 +1414,19 @@ export default class Deck extends Component {
                   return (
                     <div className="your-deck-card" key={id}>
                       <div className="image-container">
-                        <img src={card.image} alt="pokemon" />
-                        <li>
-                          <button
-                            className="delete-card"
-                            onClick={() => this.props.data.deleteFromDeck(id)}
-                          >
-                            <i className="far fa-trash-alt"></i>
-                          </button>
-                        </li>
+                        <img
+                          src={card.image}
+                          onMouseOver={(e) => {
+                            this.props.data.prevImage = e.currentTarget.src;
+
+                            e.currentTarget.src = require("../menu-icons/delete.svg");
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.src = this.props.data.prevImage;
+                          }}
+                          onClick={() => this.props.data.deleteFromDeck(id)}
+                          alt="pokemon"
+                        />
                       </div>
                     </div>
                   );
