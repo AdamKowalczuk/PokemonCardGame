@@ -13,7 +13,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
-        specialEffect: "Hp",
+        specialEffect: [
+          {
+            name: "Hp",
+            value: 3,
+            description: "Wzmocnij sojuszniczą kartę o 2 punkty życia",
+          },
+        ],
       },
       {
         id: 142,
@@ -23,7 +29,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
-        specialEffect: "Hp",
+        specialEffect: [
+          {
+            name: "Heal",
+            value: 3,
+            description: "Przywróć 3 życia swojemu bohaterowi",
+          },
+        ],
       },
       {
         id: 65,
@@ -33,7 +45,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
-        specialEffect: "Taunt",
+        specialEffect: [
+          {
+            name: "Heal",
+            value: 3,
+            description: "Przywróć 3 życia swojemu bohaterowi",
+          },
+        ],
       },
       {
         id: 24,
@@ -43,7 +61,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
-        specialEffect: "Dmg",
+        specialEffect: [
+          {
+            name: "Hp",
+            value: 3,
+            description: "Wzmocnij sojuszniczą kartę o 2 punkty życia",
+          },
+        ],
       },
       {
         id: 59,
@@ -53,6 +77,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "Dmg",
+            value: 3,
+            description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+          },
+        ],
       },
       {
         id: 144,
@@ -62,7 +93,15 @@ export default class Deck extends Component {
         attack: 10,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "Dmg",
+            value: 3,
+            description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+          },
+        ],
       },
+
       {
         id: 15,
         name: "beedrill",
@@ -71,6 +110,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "Dmg",
+            value: 3,
+            description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+          },
+        ],
       },
       {
         id: 69,
@@ -80,6 +126,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "Dmg",
+            value: 3,
+            description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+          },
+        ],
       },
       {
         id: 9,
@@ -89,6 +142,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 1,
@@ -98,6 +158,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 12,
@@ -107,6 +174,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 10,
@@ -116,6 +190,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 113,
@@ -125,6 +206,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 6,
@@ -134,6 +222,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 4,
@@ -143,6 +238,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 5,
@@ -152,6 +254,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 36,
@@ -161,6 +270,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 35,
@@ -170,6 +286,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 91,
@@ -179,6 +302,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 104,
@@ -188,6 +318,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 57,
@@ -197,6 +334,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 50,
@@ -206,6 +350,13 @@ export default class Deck extends Component {
         attack: 0,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 132,
@@ -215,6 +366,13 @@ export default class Deck extends Component {
         attack: 0,
         hp: 0,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 65,
@@ -224,6 +382,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 54,
@@ -233,6 +398,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 148,
@@ -242,6 +414,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 149,
@@ -251,6 +430,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 147,
@@ -260,6 +446,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 96,
@@ -269,6 +462,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 51,
@@ -278,6 +478,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 10,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 133,
@@ -287,6 +494,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
 
       {
@@ -297,6 +511,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 125,
@@ -306,6 +527,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 101,
@@ -315,6 +543,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
 
       {
@@ -325,6 +560,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 103,
@@ -334,6 +576,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 53,
@@ -343,6 +592,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 22,
@@ -352,6 +608,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 136,
@@ -361,6 +624,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 92,
@@ -370,6 +640,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 94,
@@ -379,6 +656,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 74,
@@ -388,6 +672,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 44,
@@ -397,6 +688,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 42,
@@ -406,6 +704,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 118,
@@ -415,6 +720,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 55,
@@ -424,6 +736,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 76,
@@ -433,6 +752,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 10,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 75,
@@ -442,6 +768,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 88,
@@ -451,6 +784,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 58,
@@ -460,6 +800,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 130,
@@ -469,6 +816,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 93,
@@ -478,6 +832,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 107,
@@ -487,6 +848,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 106,
@@ -496,6 +864,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 116,
@@ -505,6 +880,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 57,
@@ -514,6 +896,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 2,
@@ -523,6 +912,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 39,
@@ -532,6 +928,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 135,
@@ -541,6 +944,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 124,
@@ -550,6 +960,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 140,
@@ -559,6 +976,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 141,
@@ -568,6 +992,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 64,
@@ -577,6 +1008,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
 
       {
@@ -587,6 +1025,13 @@ export default class Deck extends Component {
         attack: 0,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 115,
@@ -596,6 +1041,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 99,
@@ -605,6 +1057,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 109,
@@ -614,6 +1073,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 98,
@@ -623,6 +1089,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 131,
@@ -632,6 +1105,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 108,
@@ -641,6 +1121,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 65,
@@ -650,6 +1137,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 67,
@@ -659,6 +1153,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 66,
@@ -668,6 +1169,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 129,
@@ -677,6 +1185,13 @@ export default class Deck extends Component {
         attack: 0,
         hp: 0,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 126,
@@ -686,6 +1201,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 81,
@@ -695,6 +1217,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 82,
@@ -704,6 +1233,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 56,
@@ -713,6 +1249,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 105,
@@ -722,6 +1265,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 52,
@@ -731,6 +1281,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 11,
@@ -740,6 +1297,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 151,
@@ -749,6 +1313,13 @@ export default class Deck extends Component {
         attack: 8,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 150,
@@ -758,6 +1329,13 @@ export default class Deck extends Component {
         attack: 11,
         hp: 10,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 146,
@@ -767,6 +1345,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 122,
@@ -776,6 +1361,13 @@ export default class Deck extends Component {
         attack: 0,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 89,
@@ -785,6 +1377,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 34,
@@ -794,6 +1393,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 31,
@@ -803,6 +1409,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 29,
@@ -812,6 +1425,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 32,
@@ -821,6 +1441,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 30,
@@ -830,6 +1457,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 33,
@@ -839,6 +1473,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 38,
@@ -848,6 +1489,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 43,
@@ -857,6 +1505,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 138,
@@ -866,6 +1521,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 139,
@@ -875,6 +1537,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 95,
@@ -884,6 +1553,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 46,
@@ -893,6 +1569,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 47,
@@ -902,6 +1585,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 53,
@@ -911,6 +1601,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 25,
@@ -920,6 +1617,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 18,
@@ -929,6 +1633,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 17,
@@ -938,6 +1649,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 16,
@@ -947,6 +1665,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 127,
@@ -956,6 +1681,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 60,
@@ -965,6 +1697,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 61,
@@ -974,6 +1713,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 62,
@@ -983,6 +1729,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 77,
@@ -992,6 +1745,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 137,
@@ -1001,6 +1761,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 57,
@@ -1010,6 +1777,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 54,
@@ -1019,6 +1793,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 26,
@@ -1028,6 +1809,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 78,
@@ -1037,6 +1825,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 20,
@@ -1046,6 +1841,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 19,
@@ -1055,6 +1857,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 112,
@@ -1064,6 +1873,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 8,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 111,
@@ -1073,6 +1889,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 27,
@@ -1082,6 +1905,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 28,
@@ -1091,6 +1921,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 123,
@@ -1100,6 +1937,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 117,
@@ -1109,6 +1953,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 119,
@@ -1118,6 +1969,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 86,
@@ -1127,6 +1985,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 90,
@@ -1136,6 +2001,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 79,
@@ -1145,6 +2017,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 143,
@@ -1154,6 +2033,13 @@ export default class Deck extends Component {
         attack: 10,
         hp: 11,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 80,
@@ -1163,6 +2049,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 21,
@@ -1172,6 +2065,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 7,
@@ -1181,6 +2081,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 3,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 121,
@@ -1190,6 +2097,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 120,
@@ -1199,6 +2113,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 114,
@@ -1208,6 +2129,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 128,
@@ -1217,6 +2145,13 @@ export default class Deck extends Component {
         attack: 7,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 72,
@@ -1226,6 +2161,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 73,
@@ -1235,6 +2177,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 134,
@@ -1244,6 +2193,13 @@ export default class Deck extends Component {
         attack: 5,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 3,
@@ -1253,6 +2209,13 @@ export default class Deck extends Component {
         attack: 6,
         hp: 7,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 49,
@@ -1262,6 +2225,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 48,
@@ -1271,6 +2241,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 71,
@@ -1280,6 +2257,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 5,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 45,
@@ -1289,6 +2273,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 100,
@@ -1298,6 +2289,13 @@ export default class Deck extends Component {
         attack: 4,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 37,
@@ -1307,6 +2305,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 8,
@@ -1316,6 +2321,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 13,
@@ -1325,6 +2337,13 @@ export default class Deck extends Component {
         attack: 2,
         hp: 1,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
 
       {
@@ -1335,6 +2354,13 @@ export default class Deck extends Component {
         attack: 1,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 110,
@@ -1344,6 +2370,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
 
       {
@@ -1354,6 +2387,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 4,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 145,
@@ -1363,6 +2403,13 @@ export default class Deck extends Component {
         attack: 9,
         hp: 6,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
       {
         id: 41,
@@ -1372,6 +2419,13 @@ export default class Deck extends Component {
         attack: 3,
         hp: 2,
         inDeck: false,
+        specialEffect: [
+          {
+            name: "",
+            value: 0,
+            description: "",
+          },
+        ],
       },
     ],
   };
@@ -1406,13 +2460,20 @@ export default class Deck extends Component {
 
                 <img src={card.image} className="pokemon-image" alt="pokemon" />
                 <p className="attack stats">{card.attack}</p>
-                <p
+                <div
                   className={
-                    card.specialEffect === undefined ? "" : "special-effect"
+                    card.specialEffect[0].name === ""
+                      ? ""
+                      : "special-effect tooltip"
                   }
                 >
-                  {card.specialEffect}
-                </p>
+                  {card.specialEffect[0].name}
+                  <span className="tooltiptext">
+                    {card.specialEffect[0].description !== ""
+                      ? card.specialEffect[0].description
+                      : null}
+                  </span>
+                </div>
                 <p className="hp stats">{card.hp}</p>
               </div>
             );
