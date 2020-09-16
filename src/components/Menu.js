@@ -301,17 +301,7 @@ export default class Menu extends Component {
           availableAttacks: 1,
           specialEffect: "poison",
         },
-        {
-          id: 59,
-          name: "arcanine",
-          image: require("../pokemons/arcanine.svg"),
-          mana: 5,
-          attack: 5,
-          hp: 6,
-          inDeck: false,
-          availableAttacks: 1,
-          specialEffect: "",
-        },
+
         {
           id: 144,
           name: "articuno",

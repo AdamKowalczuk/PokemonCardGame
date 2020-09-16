@@ -120,12 +120,19 @@
   height: 50px;
   opacity: 0.5;
 }
+.add-card-inActive {
+  opacity: 0;
+}
 .add-card:hover {
   transform: scale(1.2);
   transition-timing-function: ease-out;
   opacity: 1;
   cursor: pointer;
 }
+.add-card-inActive:hover {
+  opacity: 0;
+}
+
 .pokemon-image:hover {
   transform: scale(1.2);
   transition-timing-function: ease-out;

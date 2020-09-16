@@ -1384,14 +1384,26 @@ export default class Deck extends Component {
             return (
               <div value={id} className="card-icon" key={id}>
                 <p className="mana stats">{card.mana}</p>
-                <img
-                  className="add-card"
-                  src={require("../menu-icons/add.svg")}
-                  alt="add button"
-                  onClick={() => {
-                    this.props.data.addToDeck(this.state.cards[id]);
-                  }}
-                />
+                {(this.props.data.playerOne === true &&
+                  this.props.data.yourDeck.length < 20) ||
+                (this.props.data.playerOne === false &&
+                  this.props.data.enemyDeck.length < 20) ? (
+                  <img
+                    className="add-card"
+                    src={require("../menu-icons/add.svg")}
+                    alt="add button"
+                    onClick={() => {
+                      this.props.data.addToDeck(this.state.cards[id]);
+                    }}
+                  />
+                ) : (
+                  <img
+                    className="add-card add-card-inActive"
+                    src={require("../menu-icons/add.svg")}
+                    alt="add button"
+                  />
+                )}
+
                 <img src={card.image} className="pokemon-image" alt="pokemon" />
                 <p className="attack stats">{card.attack}</p>
                 <p
@@ -1410,7 +1422,10 @@ export default class Deck extends Component {
           {this.props.data.playerOne ? (
             <>
               <div className="your-deck-header">
-                <h2>Talia gracza 1 {this.props.data.yourDeck.length}/20</h2>
+                <h2>
+                  Gracz 1 <br />
+                  {this.props.data.yourDeck.length}/20
+                </h2>
                 <button
                   className="btn change-player-button"
                   onClick={() => this.props.data.changePlayer()}
@@ -1445,7 +1460,10 @@ export default class Deck extends Component {
           ) : (
             <>
               <div className="your-deck-header">
-                <h2>Talia gracza 2 {this.props.data.enemyDeck.length}/20</h2>
+                <h2>
+                  Gracz 2 <br />
+                  {this.props.data.enemyDeck.length}/20
+                </h2>
                 <button
                   className="btn change-player-button"
                   onClick={() => this.props.data.changePlayer()}

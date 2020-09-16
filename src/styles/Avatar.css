@@ -42,7 +42,7 @@
 }
 
 .box .save-button,
-.inActive-button {
+.box .inActive-button {
   margin-top: 0px !important;
   position: absolute;
   float: right;
