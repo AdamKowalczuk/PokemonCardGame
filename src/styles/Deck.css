@@ -17,7 +17,7 @@
 .your-deck {
   width: 30%;
   height: 100%;
-  background-color: #72747a;
+  background-color: #3f4441;
   position: fixed;
   right: 0px;
   top: 0px;
@@ -53,7 +53,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  gap: 10px 30%;
+  gap: 10px 30px;
   grid-template-areas:
     " . . "
     " . . "
@@ -81,7 +81,7 @@
 
 .your-deck-footer {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 1px 1px;
   grid-template-areas: ".";
@@ -183,4 +183,45 @@
   .add-card {
     height: 30px;
   }
+  .your-deck-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2fr;
+    gap: 1px 1px;
+    grid-template-areas: ".";
+    grid-area: footer;
+  }
+}
+
+.change-player-button {
+  color: #fddb3a;
+  border: 3px solid #fddb3a;
+}
+.change-player-button:hover {
+  background: #fddb3a;
+  color: #000;
+}
+.save-button {
+  color: #00ff7f;
+  border: 3px solid #00ff7f;
+}
+.save-button:hover {
+  background: #00ff7f;
+  color: #000;
+}
+.delete-all-button {
+  color: #ea5455;
+  border: 3px solid #ea5455;
+}
+.delete-all-button:hover {
+  background: #ea5455;
+  color: #000;
+}
+.inActive-button {
+  color: #fff;
+  border: 3px solid #fff;
+}
+.inActive-button:hover {
+  background: #fff;
+  color: #000;
 }

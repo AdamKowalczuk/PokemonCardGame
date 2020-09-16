@@ -123,7 +123,7 @@ export default class Avatar extends Component {
     if (this.state.currentPlayer === 1) {
       let avatars = [...this.state.avatars];
       let avatar = { ...avatars[id] };
-      avatar.color = "#e36414";
+      avatar.color = "green";
       avatars[id] = avatar;
       let prevAvatar = { ...avatars[this.state.previous1] };
       prevAvatar.color = "#dacdbe";
@@ -157,24 +157,27 @@ export default class Avatar extends Component {
     return (
       <>
         <div className="box">
-          <button
-            id="change3"
-            className="btn-change"
-            onClick={() => {
-              this.props.data.changePage(0);
-              this.props.data.changeAvatar(
-                this.state.choosen1.image,
-                this.state.choosen2.image
-              );
-            }}
-          >
-            <span>Zapisz</span>
-          </button>
+          {this.state.choosen1.color !== undefined &&
+          this.state.choosen2.color !== undefined ? (
+            <button
+              className="btn save-button"
+              onClick={() => {
+                this.props.data.changePage(0);
+                this.props.data.changeAvatar(
+                  this.state.choosen1.image,
+                  this.state.choosen2.image
+                );
+              }}
+            >
+              Zapisz
+            </button>
+          ) : (
+            <button className="btn inActive-button">Zapisz</button>
+          )}
         </div>
 
         <div className="avatars-container">
           <h1 className="avatar-header">Wybierz swój avatar</h1>
-          <div className="button-box"></div>
           {this.state.avatars.map((avatar, id) => {
             return (
               <div

@@ -1411,7 +1411,10 @@ export default class Deck extends Component {
             <>
               <div className="your-deck-header">
                 <h2>Talia gracza 1 {this.props.data.yourDeck.length}/20</h2>
-                <button onClick={() => this.props.data.changePlayer()}>
+                <button
+                  className="btn change-player-button"
+                  onClick={() => this.props.data.changePlayer()}
+                >
                   Zmień gracza
                 </button>
               </div>
@@ -1443,7 +1446,10 @@ export default class Deck extends Component {
             <>
               <div className="your-deck-header">
                 <h2>Talia gracza 2 {this.props.data.enemyDeck.length}/20</h2>
-                <button onClick={() => this.props.data.changePlayer()}>
+                <button
+                  className="btn change-player-button"
+                  onClick={() => this.props.data.changePlayer()}
+                >
                   Zmień gracza
                 </button>
               </div>
@@ -1452,15 +1458,19 @@ export default class Deck extends Component {
                   return (
                     <div className="your-deck-card" key={id}>
                       <div className="image-container">
-                        <img src={card.image} alt="pokemon" />
-                        <li>
-                          <button
-                            className="delete-card"
-                            onClick={() => this.props.data.deleteFromDeck(id)}
-                          >
-                            <i className="far fa-trash-alt"></i>
-                          </button>
-                        </li>
+                        <img
+                          src={card.image}
+                          onMouseOver={(e) => {
+                            this.props.data.prevImage = e.currentTarget.src;
+
+                            e.currentTarget.src = require("../menu-icons/delete.svg");
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.src = this.props.data.prevImage;
+                          }}
+                          onClick={() => this.props.data.deleteFromDeck(id)}
+                          alt="pokemon"
+                        />
                       </div>
                     </div>
                   );
@@ -1470,46 +1480,35 @@ export default class Deck extends Component {
           )}
 
           <div className="your-deck-footer">
-            {this.state.number === 20 ? (
+            {(this.props.data.yourDeck.length === 20 &&
+              this.props.data.playerOne === true) ||
+            (this.props.data.enemyDeck.length === 20 &&
+              this.props.data.playerOne === false) ? (
               <>
-                <ul>
-                  <li>
-                    <button className="unlocked-green send hover-color">
-                      <i className="fas fa-share-square"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="unlocked-red hover-color"
-                      onClick={() => this.props.data.deleteAll()}
-                    >
-                      <i className="far fa-trash-alt"></i>
-                    </button>
-                  </li>
-                </ul>
+                <button
+                  className="btn save-button"
+                  onClick={() => {
+                    this.props.data.changePage(0);
+                  }}
+                >
+                  Zapisz
+                </button>
+                <button
+                  className="btn delete-all-button"
+                  onClick={() => this.props.data.deleteAll()}
+                >
+                  Wyczyść
+                </button>
               </>
             ) : (
               <>
-                <ul>
-                  <li>
-                    <button
-                      className="locked send"
-                      onClick={() => {
-                        this.props.data.changePage(0);
-                      }}
-                    >
-                      <i className="fas fa-share-square"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className="locked"
-                      onClick={() => this.props.data.deleteAll()}
-                    >
-                      <i className="far fa-trash-alt"></i>
-                    </button>
-                  </li>
-                </ul>
+                <button className="btn inActive-button">Zapisz</button>
+                <button
+                  className="btn delete-all-button"
+                  onClick={() => this.props.data.deleteAll()}
+                >
+                  Wyczyść
+                </button>
               </>
             )}
           </div>
