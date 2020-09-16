@@ -1382,19 +1382,15 @@ export default class Deck extends Component {
         <div className="card-collection">
           {this.state.cards.map((card, id) => {
             return (
-              <div
-                value={id}
-                className="card-icon"
-                key={id}
-                onClick={() => {
-                  this.props.data.addToDeck(this.state.cards[id]);
-                }}
-              >
+              <div value={id} className="card-icon" key={id}>
                 <p className="mana stats">{card.mana}</p>
                 <img
                   className="add-card"
                   src={require("../menu-icons/add.svg")}
                   alt="add button"
+                  onClick={() => {
+                    this.props.data.addToDeck(this.state.cards[id]);
+                  }}
                 />
                 <img src={card.image} className="pokemon-image" alt="pokemon" />
                 <p className="attack stats">{card.attack}</p>
