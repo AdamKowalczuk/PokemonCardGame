@@ -158,7 +158,8 @@ export default class Avatar extends Component {
       <>
         <div className="box">
           <button
-            className="return-button"
+            id="change3"
+            className="btn-change"
             onClick={() => {
               this.props.data.changePage(0);
               this.props.data.changeAvatar(
@@ -167,13 +168,13 @@ export default class Avatar extends Component {
               );
             }}
           >
-            Zatwierdź
-            {/* <img src={require("../menu-icons/send.svg")} alt="save icon" /> */}
+            <span>Zapisz</span>
           </button>
         </div>
+
         <div className="avatars-container">
           <h1 className="avatar-header">Wybierz swój avatar</h1>
-
+          <div className="button-box"></div>
           {this.state.avatars.map((avatar, id) => {
             return (
               <div

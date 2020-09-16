@@ -17,6 +17,7 @@
   margin-top: 5vh;
   grid-area: h1;
   font-family: "Shojumaru", cursive;
+  color: #4a4147;
 }
 .start-button {
   grid-area: start-button;

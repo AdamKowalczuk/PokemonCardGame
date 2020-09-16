@@ -6,7 +6,7 @@
   grid-template-rows: repeat(6, 1fr);
   gap: 1px 1px;
   grid-template-areas:
-    "h1 h1 h1 h1"
+    "h1 h1 h1 btn"
     ". . . ."
     ". . . ."
     ". . . ."
@@ -31,30 +31,69 @@
 .avatar-header {
   grid-area: h1;
   font-family: "Shojumaru", cursive;
-}
-@media screen and (max-width: 759px) {
-  .avatars-container {
-    height: 100%;
-  }
-  .avatar-image img {
-    width: 100%;
-    height: auto;
-  }
+  color: #4a4147;
 }
 .box {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
 }
-.return-button {
-  position: absolute;
-  background: yellow;
-  float: right;
-  height: 6vh;
+.button-box {
+  grid-area: btn;
 }
-/* .return-button img {
-  background: black;
-  padding: 5px;
-  height: 3.2vh;
-  transform: scale(2);
-} */
+.btn-change {
+  position: absolute;
+  float: right;
+  text-transform: uppercase;
+
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 13px 30px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-change span {
+  position: relative;
+  z-index: 1;
+}
+.btn-change:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 650%;
+  width: 230%;
+  background: #d3394c;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn-change:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+@media screen and (max-width: 759px) {
+  .avatar-image img {
+    width: 100%;
+    height: auto;
+  }
+  .btn-change {
+    padding: 13px 15px;
+  }
+  .btn-change:after {
+    height: 650%;
+    width: 320%;
+  }
+}
