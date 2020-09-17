@@ -192,7 +192,9 @@
     border-left: 2px solid green;
     margin-top: 0px;
   }
-
+  .hand-card .special-effect {
+    bottom: 0px;
+  }
   .hand-card .stats {
     border-radius: 50%;
     padding: 2px;
