@@ -32,7 +32,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 63,
@@ -43,7 +49,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 142,
@@ -54,7 +66,13 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 65,
@@ -65,7 +83,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 24,
@@ -76,7 +100,13 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 59,
@@ -87,7 +117,13 @@ export default class Menu extends Component {
           hp: 6,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 144,
@@ -98,7 +134,13 @@ export default class Menu extends Component {
           hp: 7,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 15,
@@ -109,7 +151,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 2,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
 
         {
@@ -121,7 +169,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 1,
@@ -132,7 +186,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 12,
@@ -143,7 +203,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 10,
@@ -154,7 +220,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 113,
@@ -165,7 +237,13 @@ export default class Menu extends Component {
           hp: 7,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 6,
@@ -176,7 +254,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 4,
@@ -187,7 +271,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 5,
@@ -198,7 +288,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 36,
@@ -209,7 +305,13 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 35,
@@ -220,7 +322,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 91,
@@ -231,7 +339,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 104,
@@ -242,7 +356,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "attackEnemyHero", value: 3 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
       ],
       enemyDeck: [
@@ -255,7 +375,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: [{ name: "drawCard", value: 1 }],
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 63,
@@ -266,7 +392,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 142,
@@ -277,7 +409,13 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 65,
@@ -288,7 +426,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 24,
@@ -299,9 +443,31 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "poison",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
-
+        {
+          id: 59,
+          name: "arcanine",
+          image: require("../pokemons/arcanine.svg"),
+          mana: 5,
+          attack: 5,
+          hp: 6,
+          inDeck: false,
+          availableAttacks: 1,
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
+        },
         {
           id: 144,
           name: "articuno",
@@ -311,7 +477,13 @@ export default class Menu extends Component {
           hp: 7,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 15,
@@ -322,19 +494,15 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 2,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
-        {
-          id: 69,
-          name: "bellsprout",
-          image: require("../pokemons/bellsprout.svg"),
-          mana: 1,
-          attack: 1,
-          hp: 2,
-          inDeck: false,
-          availableAttacks: 1,
-          specialEffect: "taunt",
-        },
+
         {
           id: 9,
           name: "blastoise",
@@ -344,7 +512,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 1,
@@ -355,7 +529,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "addHp",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 12,
@@ -366,7 +546,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "Taunt",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 10,
@@ -377,7 +563,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 113,
@@ -388,7 +580,13 @@ export default class Menu extends Component {
           hp: 7,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "addHp",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 6,
@@ -399,7 +597,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 4,
@@ -410,7 +614,13 @@ export default class Menu extends Component {
           hp: 2,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 5,
@@ -421,7 +631,13 @@ export default class Menu extends Component {
           hp: 4,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 36,
@@ -432,7 +648,13 @@ export default class Menu extends Component {
           hp: 5,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 35,
@@ -443,7 +665,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 91,
@@ -454,7 +682,13 @@ export default class Menu extends Component {
           hp: 8,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
         {
           id: 104,
@@ -465,7 +699,13 @@ export default class Menu extends Component {
           hp: 3,
           inDeck: false,
           availableAttacks: 1,
-          specialEffect: "addAttack",
+          specialEffect: [
+            {
+              name: "Dmg",
+              value: 3,
+              description: "Zadaj 3 obrażenie wrogiemu bohaterowi",
+            },
+          ],
         },
       ],
       yourCardNumber: 0,

@@ -23,6 +23,9 @@ export default class Gameboard extends Component {
       yourHp: 30,
       enemyHp: 30,
       whichElementClicked: "",
+      yourAvatarDamaged: "false",
+      enemyAvatarDamaged: "false",
+      unitDamaged: "false",
     };
 
     // this.init();
@@ -48,12 +51,7 @@ export default class Gameboard extends Component {
     ];
     this.setState({ yourHand, enemyHand });
   }
-  checkCard(card) {
-    // for(i=this.state.actualCardsNumber;i<this.state.cardsInYourHandNumber;i++){
-    // }
-    // if(card.)
-    // return card[this.state.cardsInYourHandNumber]
-  }
+
   changePlayer(yourID, enemyID) {
     if (this.state.firstPlayerTurn === true) {
       this.setState({
@@ -86,7 +84,6 @@ export default class Gameboard extends Component {
   }
   drawACard(yourID, enemyID, message) {
     if (this.state.firstPlayerTurn === true && message === "normal") {
-      console.log("pierwszy if");
       let enemyHand = [...this.state.enemyHand];
       let newCard = { ...this.props.data.enemyDeck[enemyID] };
 
@@ -102,12 +99,8 @@ export default class Gameboard extends Component {
         // firstPlayerTurn: !this.state.firstPlayerTurn,
       });
     } else if (this.state.firstPlayerTurn === false && message === "normal") {
-      console.log("drugi if");
       let yourHand = [...this.state.yourHand];
       let newCard = { ...this.props.data.yourDeck[yourID] };
-      console.log("your hand", yourHand);
-      console.log("yourId", yourID);
-      console.log("newCard", newCard);
       if (this.state.yourHand.length < 8) {
         newCard.inHand = true;
         this.props.data.yourDeck[yourID].inHand = true;
@@ -262,7 +255,6 @@ export default class Gameboard extends Component {
     }
   }
   attack(card, id, player) {
-    console.log("attack:", player);
     if (player === "first" && card.availableAttacks > 0) {
       let yourActiveCards = [...this.state.yourActiveCards];
       let yourActiveCard = { ...yourActiveCards[id] };
@@ -285,8 +277,8 @@ export default class Gameboard extends Component {
       });
     }
   }
-  getDamage(card, id, player) {
-    console.log("getDamage:", player);
+  getDamage(card, id, player, e) {
+    // e.currentTarget.color = "red";
     if (player === "first") {
       let yourActiveCards = [...this.state.yourActiveCards];
       let yourActiveCard = { ...yourActiveCards[id] };
@@ -326,7 +318,7 @@ export default class Gameboard extends Component {
   //     });
   //   }, 5000);
   // }
-  avatarGetDamage(player) {
+  avatarGetDamage(player, e) {
     this.setState({
       isAttackClicked1: false,
       isAttackClicked2: false,
@@ -342,6 +334,12 @@ export default class Gameboard extends Component {
         actualAttack: 0,
       });
     }
+  }
+  getDamageAnimation(e) {
+    console.log("działa");
+    console.log(e);
+    console.log(e.currentTarget);
+    console.log(e.currentTarget.className);
   }
   render() {
     if (this.state.enemyHp <= 0) {
@@ -375,7 +373,7 @@ export default class Gameboard extends Component {
     return (
       <>
         <div className="gameboard">
-          <div className="enemy-hand row">
+          <div className="enemy-hand">
             {this.state.enemyHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {
@@ -434,7 +432,7 @@ export default class Gameboard extends Component {
                 onClick={
                   this.state.firstPlayerTurn === false
                     ? null
-                    : () => this.avatarGetDamage("second")
+                    : (e) => this.avatarGetDamage("second", e)
                 }
               />
             </div>
@@ -442,7 +440,7 @@ export default class Gameboard extends Component {
               <div className="stats-container">{manaTable2}</div>
             </div>
           </div>
-          <div className="enemy-side row">
+          <div className="enemy-side">
             {this.state.enemyActiveCards.map((card, id) => {
               // if (this.props.data.yourDeck[id].inHand === true) {
               return (
@@ -457,7 +455,7 @@ export default class Gameboard extends Component {
                     onClick={
                       this.state.firstPlayerTurn === false
                         ? () => this.attack(card, id, "second")
-                        : () => this.getDamage(card, id, "second")
+                        : (e) => this.getDamage(card, id, "second", e)
                     }
                   >
                     <p className="mana stats">
@@ -499,7 +497,7 @@ export default class Gameboard extends Component {
           >
             {this.state.firstPlayerTurn ? "Twoja tura" : "Tura wroga"}
           </button>
-          <div className="your-side row">
+          <div className="your-side">
             {this.state.yourActiveCards.map((card, id) => {
               // if (this.props.data.yourDeck[id].inHand === true) {
               return (
@@ -514,7 +512,7 @@ export default class Gameboard extends Component {
                     onClick={
                       this.state.firstPlayerTurn === true
                         ? () => this.attack(card, id, "first")
-                        : () => this.getDamage(card, id, "first")
+                        : (e) => this.getDamage(card, id, "first", e)
                     }
                     // onChange={(e) => this.getDamageAnimation(e)}
                   >
@@ -570,7 +568,7 @@ export default class Gameboard extends Component {
                 onClick={
                   this.state.firstPlayerTurn === true
                     ? null
-                    : () => this.avatarGetDamage("first")
+                    : (e) => this.avatarGetDamage("first", e)
                 }
               />
             </div>
@@ -585,7 +583,7 @@ export default class Gameboard extends Component {
               </div>
             </div>
           </div>
-          <div className="your-hand row">
+          <div className="your-hand">
             {this.state.yourHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {

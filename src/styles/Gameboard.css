@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 5px 5px;
   background: #171515;
   grid-template-areas:
     "enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand enemy-hand"
@@ -13,6 +12,7 @@
     "your-info your-info your-info your-info your-info your-info your-info your-info your-info"
     "your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand";
   background-image: url("../board-images/pokeball2.svg");
+  row-gap: 2px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,67 +20,76 @@
 
 .your-hand {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: auto;
   grid-template-rows: 1fr;
-  gap: 1px 1px;
   grid-template-areas: ". . . . . . . .";
   grid-area: your-hand;
+  column-gap: 1px;
   /* background-color: #fefefe; */
+  height: 15vh;
 }
 
+.your-hand .card-icon:hover {
+  transform: translateY(-0.5rem);
+}
+.enemy-hand .card-icon:hover {
+  transform: translateY(0.5rem);
+}
 .your-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr;
-  gap: 1px 1px;
   grid-template-areas: ".  .  .  .";
   grid-area: your-info;
   /* background-color: #fefefe; */
   /* background-color: #00aaff; */
+  height: 20vh;
 }
 
 .your-side {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
-  gap: 1px 1px;
   grid-template-areas: ". . . . .";
   grid-area: your-side;
   /* background-color: #332c2b; */
+  height: 15vh;
+  column-gap: 20px;
 }
 
 .enemy-side {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
-  gap: 1px 1px;
   grid-template-areas: ". . . . .";
   grid-area: enemy-side;
+  column-gap: 20px;
   /* background-color: #332c2b; */
+  height: 15vh;
 }
 
 .enemy-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr;
-  gap: 1px 1px;
   grid-template-areas: ". . . .";
   grid-area: enemy-info;
   /* background-color: #e62129; */
+  height: 20vh;
 }
 
 .enemy-hand {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  gap: 5px 5px;
   grid-template-areas: ". . . . . . . .";
   grid-area: enemy-hand;
   /* background-color: #e62129; */
+  height: 15vh;
+  column-gap: 1px;
 }
 .row {
   width: 100%;
-  height: 100%;
 }
 
 .photos {
@@ -90,12 +99,34 @@
 }
 .photos img {
   width: 100%;
-  max-height: 16vh;
+  max-height: 15vh;
 }
 .your-avatar,
 .enemy-avatar {
   border: 5px solid #33363a;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  background-color: #fff;
+  height: 20vh;
 }
+
+/* .enemy-turn:checked {
+  animation: wobble 1s infinite;
+} */
+/* @keyframes wobble {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} */
 .your-mana,
 .enemy-mana {
   width: 100%;
@@ -128,6 +159,11 @@
     max-height: 4vh;
   }
 }
+.your-avatar,
+.enemy-avatar {
+  margin-top: 2.5vh;
+  height: 15vh;
+}
 .enemy-hp,
 .enemy-cards-number,
 .your-hp,
@@ -136,12 +172,27 @@
 }
 .hand-card {
   display: grid;
+  max-height: 15vh;
+}
+.your-hand .hand-card,
+.enemy-hand .hand-card {
+  max-width: 12.5vw;
+}
+.card-icon img {
+  max-height: 66px;
+}
+.your-hand .hand-card:hover {
+  transform: translateY(-1rem);
+  transform: scale(1.5);
+  transform-origin: bottom center;
+}
+.enemy-hand .hand-card:hover {
+  transform: translateY(1rem);
+  transform: scale(1.5);
+  transform-origin: top center;
 }
 .hand-card .stats {
   font-size: 16px;
-}
-.hand-card .card-icon {
-  max-height: 16vh;
 }
 .hand-card .mana {
   border-bottom: 2px solid blue;
@@ -180,6 +231,7 @@
 .enemy-turn {
   background-color: blue;
 }
+
 .border {
   -webkit-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
@@ -211,5 +263,15 @@
   }
   to {
     transform: scale(1.5);
+  }
+} */
+/* .enemy-avatar {
+  background: coral;
+
+  animation: mymove 2s infinite;
+}
+@keyframes mymove {
+  50% {
+    background: lightblue;
   }
 } */
