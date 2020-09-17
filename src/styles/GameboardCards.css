@@ -74,6 +74,11 @@
 .hand-card .card-icon img {
   max-height: 66px;
 }
+@media screen and (max-height: 700px) {
+  .hand-card .card-icon img {
+    max-height: 50%;
+  }
+}
 .your-hand .card-icon:hover {
   transform: translateY(-0.5rem);
 }
