@@ -1,0 +1,267 @@
+.hand-card .card-icon {
+  height: 15vh;
+}
+
+.hand-card .special-effect {
+  padding: 4px;
+  margin-top: 0;
+  border-top: 3px solid#8365c1;
+  border-left: 2px solid #8365c1;
+  border-right: 2px solid #8365c1;
+  bottom: 10px;
+}
+.hand-card .mana {
+  border-bottom: 2px solid blue;
+  border-right: 4px solid blue;
+}
+.hand-card .attack {
+  float: left;
+  border-top: 2px solid red;
+  border-right: 3px solid red;
+  margin-top: -12px;
+}
+.hand-card .hp {
+  float: right;
+  border-top: 2px solid green;
+  border-left: 3px solid green;
+  margin-top: -12px;
+}
+.hand-card .stats {
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tooltip {
+}
+.hand-card:nth-child(1) {
+  transform: translateX(4.5vw);
+}
+.hand-card:nth-child(2) {
+  transform: translateX(3vw);
+}
+.hand-card:nth-child(3) {
+  transform: translateX(1.5vw);
+}
+.hand-card:nth-child(4) {
+  transform: translateX(0vw);
+}
+.hand-card:nth-child(5) {
+  transform: translateX(-1.5vw);
+}
+.hand-card:nth-child(6) {
+  transform: translateX(-3vw);
+}
+.hand-card:nth-child(7) {
+  transform: translateX(-4.5vw);
+}
+.hand-card:nth-child(8) {
+  transform: translateX(-6vw);
+}
+
+.hand-card {
+  display: grid;
+  max-height: 15vh;
+}
+.hand-card .card-icon {
+  width: 100% !important;
+  max-height: 15vh !important;
+}
+.your-hand .hand-card,
+.enemy-hand .hand-card {
+  max-width: 12.5vw;
+}
+.hand-card .card-icon img {
+  max-height: 66px;
+}
+.your-hand .card-icon:hover {
+  transform: translateY(-0.5rem);
+}
+.enemy-hand .card-icon:hover {
+  transform: translateY(0.5rem);
+}
+.your-hand .hand-card:hover:nth-child(1) {
+  transform: translateX(4.5vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(2) {
+  transform: translateX(3vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(3) {
+  transform: translateX(1.5vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(4) {
+  transform: translateX(0px) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(5) {
+  transform: translateX(-1.5vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(6) {
+  transform: translateX(-3vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(7) {
+  transform: translateX(-4.5vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.your-hand .hand-card:hover:nth-child(8) {
+  transform: translateX(-6vw) scale(1.4);
+  transform-origin: bottom center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(1) {
+  transform: translateX(4.5vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(2) {
+  transform: translateX(3vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(3) {
+  transform: translateX(1.5vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(4) {
+  transform: translateX(0px) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(5) {
+  transform: translateX(-1.5vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(6) {
+  transform: translateX(-3vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(7) {
+  transform: translateX(-4.5vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+.enemy-hand .hand-card:hover:nth-child(8) {
+  transform: translateX(-6vw) scale(1.4);
+  transform-origin: top center;
+  z-index: 1;
+}
+
+@media screen and (max-width: 759px) {
+  .progressBarImage {
+    max-height: 4vh;
+  }
+  .hand-card .mana {
+    border-bottom: 2px solid blue;
+    border-right: 5px solid blue;
+    margin-bottom: 0px !important;
+  }
+  .your-avatar,
+  .enemy-avatar {
+    height: 15vh;
+  }
+
+  .hand-card .attack {
+    float: left;
+    border-top: 1px solid red;
+    border-right: 2px solid red;
+    margin-top: 0px;
+  }
+  .hand-card .hp {
+    float: right;
+    border-top: 1px solid green;
+    border-left: 2px solid green;
+    margin-top: 0px;
+  }
+
+  .hand-card .stats {
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 14px !important;
+    font-weight: bold;
+  }
+  .hand .hand-card .card-icon {
+    width: 150% !important;
+  }
+  .hand .hand-card:nth-child(1) {
+    transform: translateX(0vw);
+  }
+  .hand .hand-card:nth-child(2) {
+    transform: translateX(-1vw);
+  }
+  .hand .hand-card:nth-child(3) {
+    transform: translateX(-2vw);
+  }
+  .hand .hand-card:nth-child(4) {
+    transform: translateX(-3vw);
+  }
+  .hand .hand-card:nth-child(5) {
+    transform: translateX(-4vw);
+  }
+  .hand .hand-card:nth-child(6) {
+    transform: translateX(-5vw);
+  }
+  .hand .hand-card:nth-child(7) {
+    transform: translateX(-6vw);
+  }
+  .hand .hand-card:nth-child(8) {
+    transform: translateX(-6vw);
+  }
+  .your-hand .hand-card:hover:nth-child(1),
+  .enemy-hand .hand-card:hover:nth-child(1) {
+    transform: translateX(0vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(2),
+  .enemy-hand .hand-card:hover:nth-child(2) {
+    transform: translateX(-1vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(3),
+  .enemy-hand .hand-card:hover:nth-child(3) {
+    transform: translateX(-2vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(4),
+  .enemy-hand .hand-card:hover:nth-child(4) {
+    transform: translateX(-3vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(5),
+  .enemy-hand .hand-card:hover:nth-child(5) {
+    transform: translateX(-4vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(6),
+  .enemy-hand .hand-card:hover:nth-child(6) {
+    transform: translateX(-5vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(7),
+  .enemy-hand .hand-card:hover:nth-child(7) {
+    transform: translateX(-6vw) scale(1.4);
+  }
+  .your-hand .hand-card:hover:nth-child(8),
+  .enemy-hand .hand-card:hover:nth-child(8) {
+    transform: translateX(-6vw) scale(1.4);
+  }
+  .your-hand,
+  .enemy-hand {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .turn-button {
+    letter-spacing: 0 !important;
+    font-size: 12px !important;
+    padding: 10px 0 !important;
+    width: 15vw;
+    left: 80vw;
+  }
+}

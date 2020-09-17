@@ -12,7 +12,7 @@
     "your-info your-info your-info your-info your-info your-info your-info your-info your-info"
     "your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand your-hand";
   background-image: url("../board-images/pokeball2.svg");
-  row-gap: 2px;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@
 
 .your-hand {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: ". . . . . . . .";
   grid-area: your-hand;
@@ -29,12 +29,6 @@
   height: 15vh;
 }
 
-.your-hand .card-icon:hover {
-  transform: translateY(-0.5rem);
-}
-.enemy-hand .card-icon:hover {
-  transform: translateY(0.5rem);
-}
 .your-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
@@ -48,20 +42,20 @@
 
 .your-side {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  grid-template-areas: ". . . . .";
+  grid-template-areas: ". . . . . .";
   grid-area: your-side;
   /* background-color: #332c2b; */
   height: 15vh;
-  column-gap: 20px;
+  column-gap: 2vw;
 }
 
 .enemy-side {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  grid-template-areas: ". . . . .";
+  grid-template-areas: ". . . . . .";
   grid-area: enemy-side;
   column-gap: 20px;
   /* background-color: #332c2b; */
@@ -88,15 +82,73 @@
   height: 15vh;
   column-gap: 1px;
 }
+
 .row {
   width: 100%;
 }
+.turn-button {
+  position: relative;
+  width: 10vw;
+  left: 88vw;
+  bottom: 54.8vh;
+}
+.gameboard .save-button {
+  background: #00ff7f;
+  color: #33363a;
+  border: 3px solid #33363a;
+}
+.gameboard .save-button:hover {
+  background: transparent;
+  color: #00ff7f;
+  border: 3px solid #00ff7f;
+}
+.gameboard .delete-button {
+  background: #ea5455;
+  color: #33363a;
+  border: 3px solid #33363a;
+}
+.gameboard .delete-button:hover {
+  background: transparent;
+  color: #ea5455;
+  border: 3px solid #ea5455;
+}
+.border {
+  -webkit-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+  from {
+    background-image: linear-gradient(
+      to right,
+      rgb(182, 244, 146),
+      rgb(51, 139, 147)
+    );
+  }
+  to {
+    background: none;
+  }
+}
+.progressBarImage {
+  max-height: 8vh;
+}
 
+.your-avatar,
+.enemy-avatar {
+  margin-top: 2.5vh;
+  height: 15vh;
+}
 .photos {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.enemy-hp,
+.enemy-cards-number,
+.your-hp,
+.your-cards-number {
+  display: grid;
+}
+
 .photos img {
   width: 100%;
   max-height: 15vh;
@@ -107,26 +159,8 @@
   border-top-left-radius: 45%;
   border-top-right-radius: 45%;
   background-color: #fff;
-  height: 20vh;
+  height: 17vh;
 }
-
-/* .enemy-turn:checked {
-  animation: wobble 1s infinite;
-} */
-/* @keyframes wobble {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
 .your-mana,
 .enemy-mana {
   width: 100%;
@@ -146,132 +180,4 @@
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
-  /* padding: 10px; */
-  /* box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3); */
-  /* background: #4444ff; */
 }
-
-.progressBarImage {
-  max-height: 8vh;
-}
-@media screen and (max-width: 759px) {
-  .progressBarImage {
-    max-height: 4vh;
-  }
-}
-.your-avatar,
-.enemy-avatar {
-  margin-top: 2.5vh;
-  height: 15vh;
-}
-.enemy-hp,
-.enemy-cards-number,
-.your-hp,
-.your-cards-number {
-  display: grid;
-}
-.hand-card {
-  display: grid;
-  max-height: 15vh;
-}
-.your-hand .hand-card,
-.enemy-hand .hand-card {
-  max-width: 12.5vw;
-}
-.card-icon img {
-  max-height: 66px;
-}
-.your-hand .hand-card:hover {
-  transform: translateY(-1rem);
-  transform: scale(1.5);
-  transform-origin: bottom center;
-}
-.enemy-hand .hand-card:hover {
-  transform: translateY(1rem);
-  transform: scale(1.5);
-  transform-origin: top center;
-}
-.hand-card .stats {
-  font-size: 16px;
-}
-.hand-card .mana {
-  border-bottom: 2px solid blue;
-  border-right: 5px solid blue;
-  margin-bottom: -12px;
-}
-.hand-card .attack {
-  float: left;
-  border-top: 2px solid red;
-  border-right: 5px solid red;
-  margin-top: -12px;
-}
-.hand-card .hp {
-  float: right;
-  border-top: 2px solid green;
-  border-left: 5px solid green;
-  margin-top: -12px;
-}
-.hand-card .stats {
-  border-radius: 50%;
-  padding: 3px;
-  font-size: 20px;
-  font-weight: bold;
-}
-.turn-button {
-  position: relative;
-  bottom: 55vh;
-  left: 85vw;
-  padding: 10px;
-  color: white;
-  text-transform: uppercase;
-}
-.your-turn {
-  background-color: green;
-}
-.enemy-turn {
-  background-color: blue;
-}
-
-.border {
-  -webkit-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
-}
-@keyframes rotating {
-  from {
-    background-image: linear-gradient(
-      to right,
-      rgb(182, 244, 146),
-      rgb(51, 139, 147)
-    );
-    /* -webkit-transform: rotate(0deg); */
-    /* border: solid 5px rgba(34, 126, 34, 1); */
-  }
-  to {
-    /* border: solid 5px rgba(168, 251, 60, 1); */
-    background: none;
-
-    /* -webkit-transform: rotate(360deg); */
-  }
-}
-/* .getDamage {
-  animation: getDamage 1.5s linear;
-}
-@keyframes getDamage {
-  from {
-    transform: scale(1);
-    color: red;
-  }
-  to {
-    transform: scale(1.5);
-  }
-} */
-/* .enemy-avatar {
-  background: coral;
-
-  animation: mymove 2s infinite;
-}
-@keyframes mymove {
-  50% {
-    background: lightblue;
-  }
-} */

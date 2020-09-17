@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Gameboard.css";
-
+import "../styles/GameboardCards.css";
 export default class Gameboard extends Component {
   constructor(props) {
     super(props);
@@ -373,7 +373,7 @@ export default class Gameboard extends Component {
     return (
       <>
         <div className="gameboard">
-          <div className="enemy-hand">
+          <div className="enemy-hand hand">
             {this.state.enemyHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {
@@ -398,7 +398,19 @@ export default class Gameboard extends Component {
                     <p className="attack stats">
                       {this.props.data.enemyDeck[id].attack}
                     </p>
-
+                    <div
+                      className={
+                        card.specialEffect[0].name === ""
+                          ? ""
+                          : "special-effect tooltip"
+                      }
+                    >
+                      <span className="tooltiptext">
+                        {card.specialEffect[0].description !== ""
+                          ? card.specialEffect[0].description
+                          : null}
+                      </span>
+                    </div>
                     <p className="hp stats">
                       {this.props.data.enemyDeck[id].hp}
                     </p>
@@ -469,7 +481,19 @@ export default class Gameboard extends Component {
                     <p className="attack stats">
                       {this.state.enemyActiveCards[id].attack}
                     </p>
-
+                    <div
+                      className={
+                        card.specialEffect[0].name === ""
+                          ? ""
+                          : "special-effect tooltip"
+                      }
+                    >
+                      <span className="tooltiptext">
+                        {card.specialEffect[0].description !== ""
+                          ? card.specialEffect[0].description
+                          : null}
+                      </span>
+                    </div>
                     <p className="hp stats">
                       {this.state.enemyActiveCards[id].hp}
                     </p>
@@ -481,8 +505,8 @@ export default class Gameboard extends Component {
           <button
             className={
               this.state.firstPlayerTurn
-                ? "turn-button your-turn"
-                : "turn-button enemy-turn"
+                ? "btn save-button turn-button your-turn"
+                : "btn delete-button turn-button enemy-turn"
             }
             onClick={() => {
               this.drawACard(
@@ -527,7 +551,19 @@ export default class Gameboard extends Component {
                     <p className="attack stats">
                       {this.state.yourActiveCards[id].attack}
                     </p>
-
+                    <div
+                      className={
+                        card.specialEffect[0].name === ""
+                          ? ""
+                          : "special-effect tooltip"
+                      }
+                    >
+                      <span className="tooltiptext">
+                        {card.specialEffect[0].description !== ""
+                          ? card.specialEffect[0].description
+                          : null}
+                      </span>
+                    </div>
                     <p
                       className="hp stats"
                       // onClick={(e) => this.getDamageAnimation(e)}
@@ -583,7 +619,7 @@ export default class Gameboard extends Component {
               </div>
             </div>
           </div>
-          <div className="your-hand">
+          <div className="your-hand hand">
             {this.state.yourHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {
@@ -612,7 +648,19 @@ export default class Gameboard extends Component {
                     <p className="attack stats">
                       {this.props.data.yourDeck[id].attack}
                     </p>
-
+                    <div
+                      className={
+                        card.specialEffect[0].name === ""
+                          ? ""
+                          : "special-effect tooltip"
+                      }
+                    >
+                      <span className="tooltiptext">
+                        {card.specialEffect[0].description !== ""
+                          ? card.specialEffect[0].description
+                          : null}
+                      </span>
+                    </div>
                     <p className="hp stats">
                       {this.props.data.yourDeck[id].hp}
                     </p>
