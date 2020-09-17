@@ -1,5 +1,6 @@
 .gameboard {
   height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(6, 1fr);
