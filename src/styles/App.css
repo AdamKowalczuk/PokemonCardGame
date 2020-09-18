@@ -12,6 +12,9 @@
 
   /* font-family: "Press Start 2P", cursive; */
 }
+button {
+  outline: none;
+}
 .btn {
   margin-top: 5px;
   padding: 12px 18px;
@@ -24,7 +27,6 @@
   transition: border 0.5s ease-out, color 0.5s ease-out,
     background-color 0.5s ease-out;
   text-transform: uppercase;
-
   border-radius: 8px;
 }
 @media screen and (max-width: 759px) {

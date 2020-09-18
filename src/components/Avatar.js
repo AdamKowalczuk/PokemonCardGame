@@ -162,8 +162,8 @@ export default class Avatar extends Component {
             <button
               className="btn save-button"
               onClick={() => {
-                this.props.data.changePage(0);
-                this.props.data.changeAvatar(
+                this.props.changePage(0);
+                this.props.changeAvatar(
                   this.state.choosen1.image,
                   this.state.choosen2.image
                 );

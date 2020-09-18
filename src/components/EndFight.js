@@ -11,8 +11,12 @@ export default class EndFight extends Component {
             src={require("../board-images/crown.svg")}
             alt="crown"
           />
-          <img className="winner-image" src={this.props.image} alt="" />
-          {this.props.image.avatar1}
+          <img
+            className="winner-image"
+            src={this.props.image}
+            alt="winner player"
+          />
+
           <button
             className="btn change-player-button"
             onClick={() => {

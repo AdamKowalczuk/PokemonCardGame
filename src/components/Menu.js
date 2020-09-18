@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "../styles/Menu.css";
 import Gameboard from "./Gameboard";
 import Deck from "./Deck";
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
+import SelectPlayerInfo from "./SelectPlayerInfo";
 export default class Menu extends Component {
   constructor() {
     super();
@@ -11,8 +12,9 @@ export default class Menu extends Component {
         { image: require("../menu-icons/battle.svg") },
         { image: require("../menu-icons/deck.svg") },
         { image: require("../menu-icons/avatar.svg") },
+        // { image: require("../menu-icons/nick.svg") },
       ],
-
+      playerName: "noob",
       avatar1: "/static/media/snorlax.72d11d3c.svg",
       avatar2: "/static/media/psyduck.400d13ce.svg",
       pages: [
@@ -20,6 +22,7 @@ export default class Menu extends Component {
         { isOpen: false },
         { isOpen: false },
         { isOpen: false },
+        // { isOpen: false },
       ],
       prevPage: 0,
       yourDeck: [
@@ -781,6 +784,11 @@ export default class Menu extends Component {
       avatar2: item2,
     });
   }
+  changeName(name) {
+    this.setState({
+      name: name,
+    });
+  }
   deckShuffle(yourDeck, enemyDeck) {
     var i = yourDeck.length,
       j = 0,
@@ -872,6 +880,19 @@ export default class Menu extends Component {
                     />
                   </button>
                 </div>
+                {/* <div className="nick-button">
+                  <button
+                    type="button"
+                    className="menu-button"
+                    onClick={() => this.changePage(4)}
+                  >
+                    <img
+                      className="menu-button-image"
+                      src={this.state.icons[3].image}
+                      alt="nick"
+                    />
+                  </button>
+                </div> */}
               </div>
             );
           } else if (this.state.pages[1].isOpen === true) {
@@ -880,9 +901,10 @@ export default class Menu extends Component {
                 data={{
                   avatar1: this.state.avatar1,
                   avatar2: this.state.avatar2,
-                  changePage: this.changePage.bind(this),
                   yourDeck: this.state.yourDeck,
                   enemyDeck: this.state.enemyDeck,
+                  yourName: this.state.yourName,
+                  changePage: this.changePage.bind(this),
                 }}
               />
             );
@@ -904,13 +926,24 @@ export default class Menu extends Component {
             );
           } else if (this.state.pages[3].isOpen === true) {
             return (
-              <Avatar
+              // <Avatar
+              //   data={{
+              //     avatar1: this.state.avatar1,
+              //     avatar2: this.state.avatar2,
+              //     changeAvatar: this.changeAvatar.bind(this),
+              //     changePage: this.changePage.bind(this),
+              //     pages: this.state.pages,
+              //   }}
+              // />
+              <SelectPlayerInfo
                 data={{
                   avatar1: this.state.avatar1,
                   avatar2: this.state.avatar2,
                   changeAvatar: this.changeAvatar.bind(this),
                   changePage: this.changePage.bind(this),
+                  changeName: this.changeName.bind(this),
                   pages: this.state.pages,
+                  playerName: this.state.playerName,
                 }}
               />
             );
