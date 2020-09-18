@@ -373,7 +373,21 @@ export default class Gameboard extends Component {
     return (
       <>
         <div className="gameboard">
-          <div className="enemy-hand hand">
+          <div
+            className={
+              this.state.enemyHand.length <= 5
+                ? "enemy-hand hand"
+                : [
+                    this.state.enemyHand.length === 6
+                      ? "enemy-hand hand sixcards2"
+                      : [
+                          this.state.enemyHand.length === 7
+                            ? "enemy-hand hand sevencards2"
+                            : "enemy-hand hand eightcards2",
+                        ],
+                  ]
+            }
+          >
             {this.state.enemyHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {
@@ -619,7 +633,21 @@ export default class Gameboard extends Component {
               </div>
             </div>
           </div>
-          <div className="your-hand hand">
+          <div
+            className={
+              this.state.yourHand.length <= 5
+                ? "your-hand hand"
+                : [
+                    this.state.yourHand.length === 6
+                      ? "your-hand hand sixcards1"
+                      : [
+                          this.state.yourHand.length === 7
+                            ? "your-hand hand sevencards1"
+                            : "your-hand hand eightcards1",
+                        ],
+                  ]
+            }
+          >
             {this.state.yourHand.map((card, id) => {
               //console.log(this.props.data.yourDeck[id].inHand);
               // if (this.props.data.yourDeck[id].inHand === true) {
