@@ -130,33 +130,6 @@
 .enemy-hand .card-icon:hover {
   transform: rotate(180deg) !important;
 }
-
-/* .hand-card:nth-child(3n+0)  {
-  transform: rotate(-5deg);
-}
-
-
-.hand-card:nth-child(3n+0)  {
-  transform: rotate(-10deg);
-}
-.hand-card:nth-of-type(3) {
-  transform: rotate(-0deg);
-}
-.hand-card:nth-of-type(4) {
-  transform: rotate(-0deg);
-}
-.hand-card:nth-child(5) {
-  transform: rotate(-0deg);
-}
-.hand-card:nth-child(6) {
-  transform: rotate(-0deg);
-}
-.hand-card:nth-child(7) {
-  transform: rotate(-0deg);
-}
-.hand-card:nth-child(8) {
-  transform: rotate(-0deg);
-} */
 .hand-card {
   display: grid;
   max-height: 15vh;
