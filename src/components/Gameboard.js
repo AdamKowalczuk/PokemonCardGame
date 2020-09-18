@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/Gameboard.css";
 import "../styles/GameboardCards.css";
+import EndFight from "./EndFight";
 export default class Gameboard extends Component {
   constructor(props) {
     super(props);
@@ -343,9 +344,21 @@ export default class Gameboard extends Component {
   }
   render() {
     if (this.state.enemyHp <= 0) {
-      alert("Gracz 1 ZWYCIĘŻYŁ!");
+      return (
+        <EndFight
+          image={this.props.data.avatar1}
+          changePage={this.props.data.changePage}
+          player="pierwszy"
+        />
+      );
     } else if (this.state.yourHp <= 0) {
-      alert("Gracz 2 ZWYCIĘŻYŁ!");
+      return (
+        <EndFight
+          image={this.props.data.avatar2}
+          changePage={this.props.data.changePage}
+          player="drugi"
+        />
+      );
     }
     const manaTable = [];
     for (let i = 0; i < this.state.yourMana; i++) {
