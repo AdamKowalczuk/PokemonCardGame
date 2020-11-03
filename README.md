@@ -1,6 +1,6 @@
 # PokeNerd
 
-##Card Game
+## Card Game
 
 
 ![Screenshot1](/src/pokemon1.PNG)
